@@ -4,7 +4,7 @@ import QuickStart
 import EnumsDocs from '../components/pages/webitel-flow-ui/enums/enums-docs';
 import FlowAppEnumDocs
   from '../components/pages/webitel-flow-ui/enums/flow-app/flow-app-enum-docs';
-import LocaleDocs from '../components/pages/webitel-ui/locale/locale-docs';
+import LocaleDocs from '../components/pages/webitel-flow-ui/locale/locale-docs';
 import LookupsDocs
   from '../components/pages/webitel-flow-ui/lookups/lookups-docs';
 import FlowTypeApplicationsLookupDocs

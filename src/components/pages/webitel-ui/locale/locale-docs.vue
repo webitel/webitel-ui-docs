@@ -2,14 +2,19 @@
   <section>
     <h2>Locale</h2>
     <pre><code class="language-javascript">
-      {{ $i18n.messages }}
+      {{ en }}
     </code></pre>
   </section>
 </template>
 
 <script>
+import WebitelUiLocaleEn from '@webitel/ui-sdk/src/locale/en/en';
+
 export default {
   name: 'locale-docs',
+  computed: {
+    en: () => WebitelUiLocaleEn,
+  },
 };
 </script>
 
