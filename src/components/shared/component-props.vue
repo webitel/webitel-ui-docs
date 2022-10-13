@@ -22,10 +22,10 @@
       </template>
       <template v-slot:description="{ item }">
         <div>
-          <p
+          <md-component
             v-if="item.description"
-            v-html="md.render(item.description)"
-          ></p>
+            :value="item.description"
+          ></md-component>
           <p v-if="item.options">
             Options: <code class="language-javascript">{{ item.options }}</code>
           </p>
@@ -36,23 +36,16 @@
 </template>
 
 <script>
-import MarkdownIt from 'markdown-it';
-
-const md = new MarkdownIt({
-  linkify: true,
-});
-
+import MdComponent from './md-component';
   export default {
     name: 'component-props',
+    components: { MdComponent },
     props: {
       properties: {
         type: Array,
         default: () => [],
       },
     },
-    data: () => ({
-      md,
-    }),
     computed: {
       headers() {
         return [
