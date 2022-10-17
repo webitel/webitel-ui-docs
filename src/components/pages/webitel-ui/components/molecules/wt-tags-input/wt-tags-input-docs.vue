@@ -84,6 +84,13 @@ export default {
         description: 'Default mode for tags input is array of strings, not objects (that is the difference between tags input and select).',
       },
       {
+        value: 'optionLabel',
+        code: '<wt-tags-input option-label="label"></wt-tags-input>',
+        type: 'String',
+        default: 'null',
+        description: 'Represented property of select object. REQUIRED IN OBJECT-DATA TAG-INPUTS TO PREVENT OPTION DUPLICATION.',
+      },
+      {
         value: 'manualTagging',
         code: '<wt-tags-input manual-tagging></wt-tags-input>',
         type: 'Boolean',
