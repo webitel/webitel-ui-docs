@@ -3,7 +3,7 @@
     <h2>Copy Action</h2>
     <article>
       <div class="example-wrapper">
-        <wt-copy-action></wt-copy-action>
+        <wt-copy-action :value="value"></wt-copy-action>
         <pre><code class="language-html">&lt;wt-copy-action&gt;&lt;/wt-copy-action&gt;</code></pre>
       </div>
     </article>
@@ -23,6 +23,7 @@ import Prism from 'prismjs';
 export default {
   name: 'wt-label-docs',
   data: () => ({
+    value: 'Copied text',
     properties: [
       {
         value: 'value',
