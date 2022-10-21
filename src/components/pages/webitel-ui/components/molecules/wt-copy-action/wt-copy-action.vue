@@ -4,7 +4,7 @@
     <article>
       <div class="example-wrapper">
         <wt-copy-action :value="value"></wt-copy-action>
-        <pre><code class="language-html">&lt;wt-copy-action&gt;&lt;/wt-copy-action&gt;</code></pre>
+        <pre><code class="language-html">&lt;wt-copy-action :value="value"&gt;&lt;/wt-copy-action&gt;</code></pre>
       </div>
     </article>
     <component-props
