@@ -130,6 +130,11 @@ export default {
             route: 'context-menu',
           },
           {
+            name: 'Copy Action',
+            value: 'copy-action',
+            route: 'copy-action',
+          },
+          {
             name: 'Chip',
             value: 'chip',
             route: 'chip',

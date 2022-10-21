@@ -9,6 +9,8 @@ import WtChipDocs
   from '../components/pages/webitel-ui/components/atoms/wt-chip/wt-chip-docs';
 import WtContextMenuDocs
   from '../components/pages/webitel-ui/components/atoms/wt-context-menu/wt-context-menu-docs';
+import WtCopyAction
+  from '../components/pages/webitel-ui/components/molecules/wt-copy-action/wt-copy-action';
 import WtDividerDocs
   from '../components/pages/webitel-ui/components/atoms/wt-divider/wt-divider-docs';
 import WtIconDocs
@@ -256,6 +258,11 @@ const routes = [
             path: 'components/chip',
             name: `${prefix}chip-docs`,
             component: WtChipDocs,
+          },
+          {
+            path: 'copy-action',
+            name: `${prefix}copy-action`,
+            component: WtCopyAction,
           },
           {
             path: 'button',
