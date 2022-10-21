@@ -4,7 +4,7 @@
       <template slot="header">
         <wt-headline>
           <wt-navigation-bar :nav="nav"/>
-          <h1>Webitel UI SDK v. 2.1.12</h1>
+          <h1>Webitel UI SDK v. 2.1.18</h1>
         </wt-headline>
       </template>
       <template slot="main">
@@ -128,6 +128,11 @@ export default {
             name: 'Context Menu',
             value: 'context-menu',
             route: 'context-menu',
+          },
+          {
+            name: 'Copy Action',
+            value: 'copy-action',
+            route: 'copy-action',
           },
           {
             name: 'Chip',
