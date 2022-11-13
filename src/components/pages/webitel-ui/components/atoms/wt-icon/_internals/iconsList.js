@@ -31,8 +31,8 @@ export default [
   'copy',
   'menu',
   'clear',
-  'video',
-  'video-off',
+  'video-cam',
+  'video-cam-off',
   'bell',
   'bell-badged',
   'star',
@@ -130,4 +130,9 @@ export default [
   'stt-download',
   'stt-search',
   'idle',
+
+  'preview-tag-video',
+  'preview-tag-audio',
+  'preview-tag-application',
+  'preview-tag-image',
 ].sort();
