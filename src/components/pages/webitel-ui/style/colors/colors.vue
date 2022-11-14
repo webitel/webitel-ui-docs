@@ -53,6 +53,8 @@ const HOLD_COLOR = `${HOLD_COLOR_HUE}, 80%, 50%`;
 const TRANSFER_COLOR = `${TRANSFER_COLOR_HUE}, 80%, 50%`;
 const JOB_COLOR = `${JOB_COLOR_HUE}, 96%, 57%`;
 const ICON_COLOR = `${ICON_COLOR_HUE}, 100%, 15%`;
+const LINK_COLOR = '205, 90%, 45%, 1';
+const LINK_HOVER_COLOR = '205, 90%, 60%, 1';
 
 const MAIN_COLOR_OPACITY = 1;
 const DEFAULT_OPACITY = 0.8;
@@ -190,6 +192,18 @@ export default {
             code: `hsla(${JOB_COLOR}, ${HOVER_OPACITY})`,
             color: '--job--hover-color',
             name: 'Job hover color',
+          },
+          {
+            textColor: '#000',
+            code: `hsla(${LINK_COLOR})`,
+            color: '--link-color',
+            name: 'Link color',
+          },
+          {
+            textColor: '#000',
+            code: `hsla(${LINK_HOVER_COLOR})`,
+            color: '--link--hover-color',
+            name: 'Link hover color',
           },
         ],
       },

@@ -24,14 +24,14 @@
         {
           value: 'max',
           code: '<wt-progress-bar :max="10"></wt-progress-bar>',
-          type: 'Number',
+          type: ['Number', 'String'],
           default: '100',
           description: 'Max progress bar value',
         },
         {
           value: 'value',
           code: '<wt-progress-bar :value="10"></wt-progress-bar>',
-          type: 'Number',
+          type: ['Number', 'String'],
           description: 'Current progress bar value',
         },
         {

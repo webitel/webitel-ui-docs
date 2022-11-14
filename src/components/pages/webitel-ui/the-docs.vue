@@ -4,7 +4,7 @@
       <template slot="header">
         <wt-headline>
           <wt-navigation-bar :nav="nav"/>
-          <h1>Webitel UI SDK v. 2.1.18</h1>
+          <h1>Webitel UI SDK v. 2.1.23</h1>
         </wt-headline>
       </template>
       <template slot="main">
@@ -213,6 +213,11 @@ export default {
             name: 'Popup',
             value: 'popup',
             route: 'popup',
+          },
+          {
+            name: 'Load bar',
+            value: 'load-bar',
+            route: 'load-bar',
           },
           {
             name: 'Progress bar',

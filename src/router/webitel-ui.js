@@ -47,6 +47,8 @@ import WtNotificationDocs
   from '../components/pages/webitel-ui/components/molecules/wt-notification/wt-notification-docs';
 import WtPopupDocs
   from '../components/pages/webitel-ui/components/molecules/wt-popup/wt-popup-docs';
+import WtLoadBarDocs
+  from '../components/pages/webitel-ui/components/molecules/wt-load-bar/wt-load-bar-docs';
 import WtProgressBarDocs
   from '../components/pages/webitel-ui/components/molecules/wt-progress-bar/wt-progress-bar-docs';
 import WtRadioDocs
@@ -360,6 +362,11 @@ const routes = [
             path: 'popup',
             name: `${prefix}popup-docs`,
             component: WtPopupDocs,
+          },
+          {
+            path: 'load-bar',
+            name: `${prefix}load-bar-docs`,
+            component: WtLoadBarDocs,
           },
           {
             path: 'progress-bar',
