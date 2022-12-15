@@ -130,6 +130,8 @@ export default [
   'stt-download',
   'stt-search',
   'idle',
+  'pin',
+  'unpin',
 
   'preview-tag-video',
   'preview-tag-audio',

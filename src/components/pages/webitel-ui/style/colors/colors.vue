@@ -218,6 +218,12 @@ export default {
           },
           {
             textColor: '#fff',
+            code: `hsla(${ICON_COLOR}, 0.25)`,
+            color: '--icon-color-secondary',
+            name: 'Icon secondary color',
+          },
+          {
+            textColor: '#fff',
             code: `hsla(${ICON_COLOR}, ${HOVER_OPACITY})`,
             color: '--icon-color--hover',
             name: 'Icon hover color',
