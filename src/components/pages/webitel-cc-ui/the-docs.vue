@@ -4,7 +4,7 @@
       <template slot="header">
         <wt-headline>
           <wt-navigation-bar :nav="nav"/>
-          <h1>Webitel Contact-Center UI SDK v. 0.1.17</h1>
+          <h1>Webitel Contact-Center UI SDK v. 0.1.27-3</h1>
         </wt-headline>
       </template>
       <template slot="main">
@@ -43,7 +43,7 @@ export default {
         this.packagesNav,
         // this.modulesNav,
         // this.scriptsNav,
-        // this.storeNav,
+        this.storeNav,
       ];
     },
     componentsNav() {
@@ -138,7 +138,13 @@ export default {
         name: 'Store',
         value: 'store',
         route: '/cc-ui/store',
-        subNav: [],
+        subNav: [
+          {
+            name: 'Now',
+            value: 'now',
+            route: 'now',
+          },
+        ],
       };
     },
   },

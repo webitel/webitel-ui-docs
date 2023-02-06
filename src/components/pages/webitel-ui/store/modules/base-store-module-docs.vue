@@ -63,7 +63,7 @@
 
 <script>
 export default {
-  name: 'get-namespaced-state-docs',
+  name: 'base-store-module-docs',
 };
 </script>
 

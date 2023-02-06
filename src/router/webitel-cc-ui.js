@@ -33,6 +33,7 @@ import ScriptsDocs
   from '../components/pages/webitel-cc-ui/scripts/scripts-docs.vue';
 
 import StoreDocs from '../components/pages/webitel-cc-ui/store/store-docs.vue';
+import ReactiveNow from '../components/pages/webitel-cc-ui/store/modules/now/reactive-now.vue';
 
 import StyleDocs from '../components/pages/webitel-cc-ui/style/style-docs.vue';
 
@@ -135,7 +136,13 @@ const routes = [
         path: 'store',
         name: `${prefix}store`,
         component: StoreDocs,
-        children: [],
+        children: [
+          {
+            path: 'now',
+            name: `${prefix}now`,
+            component: ReactiveNow,
+          },
+        ],
       },
     ],
   },
