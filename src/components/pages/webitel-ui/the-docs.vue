@@ -4,7 +4,7 @@
       <template slot="header">
         <wt-headline>
           <wt-navigation-bar :nav="nav"/>
-          <h1>Webitel UI SDK v. 2.1.41</h1>
+          <h1>Webitel UI SDK v. 2.1.46</h1>
         </wt-headline>
       </template>
       <template slot="main">
@@ -50,6 +50,7 @@ export default {
         this.enumsNav,
         this.mixinsNav,
         this.modulesNav,
+        this.pluginsNav,
         this.scriptsNav,
         this.storeNav,
       ];
@@ -462,6 +463,20 @@ export default {
             value: 'notifications-module',
             route: 'notifications-module',
           },
+        ],
+      };
+    },
+    pluginsNav() {
+      return {
+        name: 'Plugins',
+        value: 'plugins',
+        route: '/ui/plugins',
+        subNav: [
+          {
+            name: 'Breakpoint',
+            value: 'breakpoint',
+            route: 'breakpoint',
+          }
         ],
       };
     },

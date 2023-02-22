@@ -15,6 +15,13 @@
         <pre><code class="language-html">&lt;wt-badge outside&gt;&lt;/wt-badge&gt;</code></pre>
       </div>
     </article>
+      <div class="example-wrapper">
+        <div class="badge-wrapper">
+          <wt-badge icon-badge="dnd"></wt-badge>
+        </div>
+        <pre><code class="language-html">&lt;wt-badge icon-badge="dnd"&gt;&lt;/wt-badge&gt;</code></pre>
+      </div>
+    </article>
     <component-props
       :properties="properties"
     ></component-props>
@@ -42,6 +49,14 @@
           type: 'Boolean',
           default: 'false',
           description: 'Draws badge outside of its container',
+        },
+        {
+          value: 'icon-badge',
+          code: '<wt-badge icon-badge="dnd"></wt-badge>',
+          type: 'String',
+          default: '',
+          description: 'Replaces simple filled badge with predefined icon',
+          options: ['dnd'],
         },
       ],
     }),

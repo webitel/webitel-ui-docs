@@ -171,6 +171,10 @@ import StyleDocs from '../components/pages/webitel-ui/style/style-docs';
 import Typography
   from '../components/pages/webitel-ui/style/typography/typography';
 import TheDocs from '../components/pages/webitel-ui/the-docs';
+import PluginsDocs
+  from '../components/pages/webitel-ui/plugins/plugins-docs.vue';
+import BreakpointPluginDocs
+  from '../components/pages/webitel-ui/plugins/breakpoint/breakpoint-plugin-docs.vue';
 
 const prefix = 'ui-';
 
@@ -596,6 +600,18 @@ const routes = [
             path: 'notifications-module',
             name: `${prefix}notifications-module`,
             component: NotificationsModuleDocs,
+          },
+        ],
+      },
+      {
+        path: 'plugins',
+        name: `${prefix}plugins`,
+        component: PluginsDocs,
+        children: [
+          {
+            path: 'breakpoint',
+            name: `${prefix}breakpoint`,
+            component: BreakpointPluginDocs,
           },
         ],
       },
