@@ -21,6 +21,7 @@ export default [
   'messenger-whatsapp',
   'messenger-whatsapp--filled',
   'messenger-messenger',
+  'meta',
   'lock',
   'move',
   'queue-member',
