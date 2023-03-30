@@ -34,7 +34,7 @@
         <wt-table
           :data="data"
         >
-          <template slot="actions">
+          <template v-slot:actions>
             <wt-table-delete-action/>
             <wt-table-edit-action/>
           </template>
@@ -43,7 +43,7 @@
           &lt;wt-table
             :data="data"
           &gt;
-          &lt;template slot="actions"&gt;
+          &lt;template v-slot:actions&gt;
             &lt;wt-table-delete-action/&gt;
             &lt;wt-table-edit-action/&gt;
           &lt;/template&gt;

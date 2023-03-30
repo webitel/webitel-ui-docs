@@ -1,20 +1,23 @@
-import Vue from 'vue';
-import App from './the-app.vue';
-import router from './router';
-import i18n from './locale/i18n';
-
 import 'prismjs/themes/prism.css';
+import { createApp } from 'vue';
+import Components from './components/shared';
+import i18n from './locale/i18n';
 import prismMixin from './mixins/prismMixin';
+import WebitelCcUi from './plugins/webitel-cc-ui';
 
-import './plugins';
-import './components/shared';
+import WebitelUi from './plugins/webitel-ui';
+import router from './router';
+import App from './the-app.vue';
 
-Vue.config.productionTip = false;
+const app = createApp(App)
+  .use(router)
+  .use(i18n)
+  .use(...WebitelUi)
+  .use(...WebitelCcUi)
+  .mixin(prismMixin);
 
-new Vue({
-  router,
-  // store,
-  i18n,
-  mixins: [prismMixin],
-  render: (h) => h(App),
-}).$mount('#app');
+Object.keys(Components).forEach((name) => {
+  app.component(name, Components[name]);
+});
+
+app.mount('#app');

@@ -21,7 +21,6 @@
         </div>
         <pre><code class="language-html">&lt;wt-badge icon-badge="dnd"&gt;&lt;/wt-badge&gt;</code></pre>
       </div>
-    </article>
     <component-props
       :properties="properties"
     ></component-props>

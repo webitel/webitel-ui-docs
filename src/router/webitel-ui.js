@@ -188,7 +188,7 @@ const routes = [
         redirect: 'changelog',
       },
       {
-        path: 'changelog',
+        path: '/changelog',
         name: `${prefix}changelog`,
         component: Changelog,
       },

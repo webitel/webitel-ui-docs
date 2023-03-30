@@ -1,13 +1,13 @@
 <template>
   <main class="docs">
     <wt-page-wrapper :actions-panel="false">
-      <template slot="header">
+      <template v-slot:header>
         <wt-headline>
           <wt-navigation-bar :nav="nav" />
           <h1>Webitel Flow UI SDK v. 0.1.8</h1>
         </wt-headline>
       </template>
-      <template slot="main">
+      <template v-slot:main>
         <div class="docs-content-wrapper">
           <router-view />
         </div>
@@ -90,7 +90,6 @@ export default {
 
 <style lang="scss" scoped>
 .docs {
-  min-height: 100%;
   background: var(--page-bg-color);
 
   .wt-page-wrapper__main > * {

@@ -8,6 +8,14 @@ body {
   @extend %typo-body-1;
 }
 
+#app {
+  min-height: 100vh;
+}
+
+.docs {
+  min-height: 100vh;
+}
+
 .docs-text {
   h1 {
     font-size: 2em;

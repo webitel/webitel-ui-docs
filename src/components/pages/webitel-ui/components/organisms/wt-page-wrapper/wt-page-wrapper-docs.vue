@@ -4,13 +4,13 @@
     <article>
       <div class="example-wrapper">
         <wt-page-wrapper style="background: var(--page-bg-color);">
-          <template slot="header">
+          <template v-slot:header>
             <div style="height: 40px; background: lightblue;"></div>
           </template>
-          <template slot="actions-panel">
+          <template v-slot:actions-panel>
             <div style="height: 80px; background: lightblue;"></div>
           </template>
-          <template slot="main">
+          <template v-slot:main>
             <div style="width: 100%; height: 320px; background: lightblue;"></div>
           </template>
         </wt-page-wrapper>
@@ -18,13 +18,13 @@
       <pre><code
           class="language-html">
         &lt;wt-page-wrapper&gt;
-          &lt;template slot="header"&gt;
-            &lt;wt-headline&gt;&lt;template slot="title">Wt Headline&lt;/template&gt;&lt;/wt-headline&gt;
+          &lt;template v-slot:header&gt;
+            &lt;wt-headline&gt;&lt;template v-slot:title>Wt Headline&lt;/template&gt;&lt;/wt-headline&gt;
           &lt;/template&gt;
-          &lt;template slot="actions-panel"&gt;
+          &lt;template v-slot:actions-panel&gt;
             &lt;div style="height: 150px; background: lightblue;"&gt;&lt;/div&gt;
           &lt;/template&gt;
-          &lt;template slot="main"&gt;
+          &lt;template v-slot:main&gt;
             &lt;div style="width: 100%; height: 500px; background: lightblue;"&gt;&lt;/div&gt;
           &lt;/template&gt;
         &lt;/wt-page-wrapper&gt;

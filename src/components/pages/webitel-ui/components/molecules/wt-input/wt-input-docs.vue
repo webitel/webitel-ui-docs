@@ -43,7 +43,7 @@
           v-model="value"
           label="After input slot usage"
         >
-          <template slot="after-input">
+          <template v-slot:after-input>
             <wt-icon-btn icon="edit"></wt-icon-btn>
             <wt-icon-btn icon="edit" size="sm"></wt-icon-btn>
             <wt-icon-btn icon="edit"></wt-icon-btn>
@@ -55,7 +55,7 @@
             v-model="value"
             label="After input slot usage"
           &gt;
-          &lt;template slot="after-input"&gt;
+          &lt;template v-slot:after-input&gt;
             &lt;wt-icon-btn icon="edit"&gt;&lt;/wt-icon-btn&gt;
             &lt;wt-icon-btn icon="edit" size="sm"&gt;&lt;/wt-icon-btn&gt;
             &lt;wt-icon-btn icon="edit"&gt;&lt;/wt-icon-btn&gt;

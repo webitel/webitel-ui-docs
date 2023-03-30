@@ -1,16 +1,12 @@
 import Vue from 'vue';
-import VueRouter from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router';
 
 import WebitelUi from './webitel-ui';
 import WebitelCcUi from './webitel-cc-ui';
 import WebitelFlowUi from './webitel-flow-ui';
 
-Vue.use(VueRouter);
-
-
-const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
+const router = createRouter({
+  history: createWebHistory(process.env.BASE_URL),
   routes: [
     {
       path: '',
@@ -27,8 +23,18 @@ const router = new VueRouter({
       // Or for Vue 3:
       // return {el: to.hash}
     }
-    return { x: 0, y: 0 };
+    return { left: 0, top: 0 };
   },
 });
+
+console.info([
+  {
+    path: '',
+    redirect: '/ui'
+  },
+  ...WebitelUi,
+  ...WebitelCcUi,
+  ...WebitelFlowUi,
+],);
 
 export default router;
