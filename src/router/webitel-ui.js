@@ -175,6 +175,8 @@ import PluginsDocs
   from '../components/pages/webitel-ui/plugins/plugins-docs.vue';
 import BreakpointPluginDocs
   from '../components/pages/webitel-ui/plugins/breakpoint/breakpoint-plugin-docs.vue';
+import AuditFormModuleDocs
+  from '../components/pages/webitel-ui/modules/audit-form/audit-form-module-docs.vue';
 
 const prefix = 'ui-';
 
@@ -600,6 +602,11 @@ const routes = [
             path: 'notifications-module',
             name: `${prefix}notifications-module`,
             component: NotificationsModuleDocs,
+          },
+          {
+            path: 'audit-form-module',
+            name: `${prefix}audit-form-module`,
+            component: AuditFormModuleDocs,
           },
         ],
       },

@@ -4,7 +4,7 @@
       <template v-slot:header>
         <wt-headline>
           <wt-navigation-bar :nav="nav"/>
-          <h1>Webitel UI SDK v. 2.1.46</h1>
+          <h1>Webitel UI SDK v. 3.0.7</h1>
         </wt-headline>
       </template>
       <template v-slot:main>
@@ -462,6 +462,11 @@ export default {
             name: 'Notifications',
             value: 'notifications-module',
             route: 'notifications-module',
+          },
+          {
+            name: 'Audit Form',
+            value: 'audit-form-module',
+            route: 'audit-form-module',
           },
         ],
       };
