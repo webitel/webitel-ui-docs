@@ -4,7 +4,7 @@
       <template v-slot:header>
         <wt-headline>
           <wt-navigation-bar :nav="nav"/>
-          <h1>Webitel UI SDK v. 3.0.7</h1>
+          <h1>Webitel UI SDK v. 3.0.12</h1>
         </wt-headline>
       </template>
       <template v-slot:main>
@@ -349,6 +349,11 @@ export default {
             name: 'Filters panel wrapper',
             value: 'filters-panel-wrapper',
             route: 'filters-panel-wrapper',
+          },
+          {
+            name: 'Icon Action',
+            value: 'icon-action',
+            route: 'icon-action',
           },
         ].sort((a, b) => a.name.localeCompare(b.name)),
       };

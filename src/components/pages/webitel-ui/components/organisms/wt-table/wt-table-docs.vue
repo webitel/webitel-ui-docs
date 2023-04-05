@@ -28,43 +28,14 @@
       :slots="slots"
     ></component-slots>
   </section>
-    <section>
-      <h2>Table Cells</h2>
-      <div class="example-wrapper">
-        <wt-table
-          :data="data"
-        >
-          <template v-slot:actions>
-            <wt-table-delete-action/>
-            <wt-table-edit-action/>
-          </template>
-        </wt-table>
-        <pre><code class="language-html">
-          &lt;wt-table
-            :data="data"
-          &gt;
-          &lt;template v-slot:actions&gt;
-            &lt;wt-table-delete-action/&gt;
-            &lt;wt-table-edit-action/&gt;
-          &lt;/template&gt;
-          &lt;/wt-table&gt;
-        </code></pre>
-      </div>
-      <component-events
-        :events="actionsEvents"
-      ></component-events>
-    </section>
   </section>
 </template>
 
 <script>
   import Prism from 'prismjs';
-  import WtTableDeleteAction from '@webitel/ui-sdk/src/components/organisms/wt-table/table-cells/wt-table-delete-action.vue';
-  import WtTableEditAction from '@webitel/ui-sdk/src/components/organisms/wt-table/table-cells/wt-table-edit-action.vue';
 
   export default {
     name: 'wt-table-docs',
-    components: { WtTableDeleteAction, WtTableEditAction },
     data: () => ({
       headers: [
         {

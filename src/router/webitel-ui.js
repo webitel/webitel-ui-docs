@@ -177,6 +177,8 @@ import BreakpointPluginDocs
   from '../components/pages/webitel-ui/plugins/breakpoint/breakpoint-plugin-docs.vue';
 import AuditFormModuleDocs
   from '../components/pages/webitel-ui/modules/audit-form/audit-form-module-docs.vue';
+import WtIconActionDocs
+  from '../components/pages/webitel-ui/components/organisms/wt-icon-action/wt-icon-action-docs.vue';
 
 const prefix = 'ui-';
 
@@ -495,6 +497,11 @@ const routes = [
             path: 'table-column-select',
             name: `${prefix}table-column-select-docs`,
             component: WtTableColumnSelectDocs,
+          },
+          {
+            path: 'icon-action',
+            name: `${prefix}icon-action-docs`,
+            component: WtIconActionDocs,
           },
         ],
       },
