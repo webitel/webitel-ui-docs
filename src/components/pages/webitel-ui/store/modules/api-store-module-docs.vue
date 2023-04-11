@@ -1,25 +1,29 @@
 <template>
   <section class="store-modules">
-    <h2>BaseStoreModule</h2>
+    <h2>ApiStoreModule</h2>
     <article class="store-module">
-      <p>Abstract Module implements a universal constructor for store modules:</p>
+      <p>Store module implements actions for working with API interface. Implements
+        <router-link
+          class="full-docs-link"
+          to="base-store-module"
+        >BaseStoreModule
+        </router-link>
+      </p>
       <pre>
-        <code class="language-javascript">import BaseStoreModule from '@webitel/ui-sdk/src/store/BaseStoreModules/BaseStoreModule';</code>
+        <code class="language-javascript">import ApiStoreModule from '@webitel/ui-sdk/src/store/BaseStoreModules/ApiStoreModule';</code>
         <code class="language-javascript">
-          const module = new BaseStoreModule({ state })
-            .setChildModules({ module1, module2 })
-            .getModule({ state, getters, actions, mutations, namespaced });
+          const module = new ApiStoreModule()
+            .generateAPIActions(APIModule)
+            .getModule();
 
           export default module;
         </code>
       </pre>
     </article>
     <section>
-      <h3>Class API:</h3>
+      <h3>API Interface:</h3>
       <article>
-        <h4><code>attachAPIModule</code></h4>
-        <p>Accepts <code>APIModule</code> object as param. Always used for next method: generateAPIActions.
-          Default APIModule should have the following interface:</p>
+        <p>Default APIModule should have the following interface:</p>
         <pre><code class="language-javascript">
         {
           getList: function,
@@ -34,7 +38,7 @@
       </article>
       <article>
         <h4><code>generateAPIActions</code></h4>
-        <p>Generates store module actions using previously set APIModule and attaches them to actions</p>
+        <p>Generates store module actions using passed APIModule</p>
         <pre><code class="language-javascript">
         actions = {
           GET_LIST: (context, params?),          // APIModule.getList({ ...context.state, ...params });
@@ -46,22 +50,13 @@
         }
       </code></pre>
       </article>
-      <article>
-        <h4><code>setChildModules</code></h4>
-        <p>Sets children modules to store module</p>
-      </article>
-      <article>
-        <h4><code>getModule</code></h4>
-        <p>Returns store module itself, built from class state. If some props are passed, they are not deeply merged with
-        class properties in created module. created module <code>"namespaced" = true</code> by default.</p>
-      </article>
     </section>
   </section>
 </template>
 
 <script>
 export default {
-  name: 'base-store-module-docs',
+  name: 'api-store-module-docs',
 };
 </script>
 

@@ -85,6 +85,8 @@ import WtNavigationBarDocs
   from '../components/pages/webitel-ui/components/organisms/wt-navigation-bar/wt-navigation-bar-docs';
 import WtNotificationsBarDocs
   from '../components/pages/webitel-ui/components/organisms/wt-notifications-bar/wt-notifications-bar-docs';
+import WtPageHeaderDocs
+  from '../components/pages/webitel-ui/components/organisms/wt-page-header/wt-page-header-docs.vue';
 import WtPageWrapperDocs
   from '../components/pages/webitel-ui/components/organisms/wt-page-wrapper/wt-page-wrapper-docs';
 import WtPaginationDocs
@@ -154,6 +156,8 @@ import SortQueryAdapterScriptsDocs
   from '../components/pages/webitel-ui/scripts/sort-query-adapter-scripts/sort-query-adapter-scripts-docs';
 import GetNamespacedStateDocs
   from '../components/pages/webitel-ui/store/helpers/get-namespaced-state-docs';
+import ApiStoreModuleDocs
+  from '../components/pages/webitel-ui/store/modules/api-store-module-docs.vue';
 import BaseStoreModuleDocs
   from '../components/pages/webitel-ui/store/modules/base-store-module-docs';
 import StoreDocs from '../components/pages/webitel-ui/store/store-docs';
@@ -503,6 +507,11 @@ const routes = [
             name: `${prefix}icon-action-docs`,
             component: WtIconActionDocs,
           },
+          {
+            path: 'page-header',
+            name: `${prefix}page-header-docs`,
+            component: WtPageHeaderDocs,
+          },
         ],
       },
       {
@@ -695,6 +704,11 @@ const routes = [
             path: 'base-store-module',
             name: `${prefix}base-store-module`,
             component: BaseStoreModuleDocs,
+          },
+          {
+            path: 'api-store-module',
+            name: `${prefix}api-store-module`,
+            component: ApiStoreModuleDocs,
           },
           {
             path: 'get-namespaced-state',

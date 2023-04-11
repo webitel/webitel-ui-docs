@@ -4,7 +4,7 @@
       <template v-slot:header>
         <wt-headline>
           <wt-navigation-bar :nav="nav"/>
-          <h1>Webitel UI SDK v. 3.0.12</h1>
+          <h1>Webitel UI SDK v. 3.1.13</h1>
         </wt-headline>
       </template>
       <template v-slot:main>
@@ -355,6 +355,11 @@ export default {
             value: 'icon-action',
             route: 'icon-action',
           },
+          {
+            name: 'Page Header',
+            value: 'page-header',
+            route: 'page-header',
+          },
         ].sort((a, b) => a.name.localeCompare(b.name)),
       };
     },
@@ -559,6 +564,11 @@ export default {
             name: 'modules/Base Store Module',
             value: 'base-store-module',
             route: 'base-store-module',
+          },
+          {
+            name: 'modules/Api Store Module',
+            value: 'api-store-module',
+            route: 'api-store-module',
           },
           {
             name: 'helpers/Get Namespaced State',
