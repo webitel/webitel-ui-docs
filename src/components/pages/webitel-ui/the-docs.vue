@@ -4,7 +4,7 @@
       <template v-slot:header>
         <wt-headline>
           <wt-navigation-bar :nav="nav"/>
-          <h1>Webitel UI SDK v. 3.1.13</h1>
+          <h1>Webitel UI SDK v. 3.1.39</h1>
         </wt-headline>
       </template>
       <template v-slot:main>
@@ -189,11 +189,6 @@ export default {
             name: 'Datepicker',
             value: 'datepicker',
             route: 'datepicker',
-          },
-          {
-            name: 'Datetimepicker',
-            value: 'datetimepicker',
-            route: 'datetimepicker',
           },
           {
             name: 'Icon Button',

@@ -33,8 +33,6 @@ import WtCheckboxDocs
   from '../components/pages/webitel-ui/components/molecules/wt-checkbox/wt-checkbox-docs';
 import WtDatepickerDocs
   from '../components/pages/webitel-ui/components/molecules/wt-datepicker/wt-datepicker-docs';
-import WtDatetimepickerDocs
-  from '../components/pages/webitel-ui/components/molecules/wt-datetimepicker/wt-datetimepicker-docs';
 import WtHintDocs
   from '../components/pages/webitel-ui/components/molecules/wt-hint/wt-hint-docs';
 import WtIconBtnDocs
@@ -349,11 +347,6 @@ const routes = [
             path: 'datepicker',
             name: `${prefix}datepicker-docs`,
             component: WtDatepickerDocs,
-          },
-          {
-            path: 'datetimepicker',
-            name: `${prefix}datetimepicker-docs`,
-            component: WtDatetimepickerDocs,
           },
           {
             path: 'icon-btn',
