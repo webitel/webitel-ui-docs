@@ -68,6 +68,19 @@ export default {
         type: 'String',
         description: 'see [**Floating Vue**](https://floating-vue.starpad.dev/api/#popperclass) docs',
       },
+      {
+        value: 'triggers',
+        code: '<wt-tooltip :triggers="[\'click\']"></wt-tooltip>',
+        type: 'Array',
+        default: '[\'hover\', \'focus\', \'touch\']',
+        description: 'see [**Floating Vue**](https://floating-vue.starpad.dev/api/#triggers) docs',
+      },
+      {
+        value: 'popper-triggers',
+        code: '<wt-tooltip :popper-triggers="[\'hover\']"></wt-tooltip>',
+        type: 'Array',
+        description: 'see [**Floating Vue**](https://floating-vue.starpad.dev/api/#poppertriggers) docs',
+      },
     ],
   }),
   mounted() {
