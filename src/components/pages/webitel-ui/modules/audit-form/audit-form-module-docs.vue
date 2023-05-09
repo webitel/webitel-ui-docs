@@ -129,7 +129,7 @@ const events = [
   },
   {
     value: 'update:validation',
-    params: 'v$ object from Vuelidate',
+    params: '{ invalid: Boolean, v$: object from Vuelidate }',
   },
 ];
 
