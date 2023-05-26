@@ -181,6 +181,8 @@ import AuditFormModuleDocs
   from '../components/pages/webitel-ui/modules/audit-form/audit-form-module-docs.vue';
 import WtIconActionDocs
   from '../components/pages/webitel-ui/components/organisms/wt-icon-action/wt-icon-action-docs.vue';
+import WtItemLinkDocs
+  from '../components/pages/webitel-ui/components/organisms/wt-item-link/wt-item-link-docs.vue';
 
 const prefix = 'ui-';
 
@@ -504,6 +506,11 @@ const routes = [
             path: 'page-header',
             name: `${prefix}page-header-docs`,
             component: WtPageHeaderDocs,
+          },
+          {
+            path: 'item-link',
+            name: `${prefix}item-link-docs`,
+            component: WtItemLinkDocs,
           },
         ],
       },

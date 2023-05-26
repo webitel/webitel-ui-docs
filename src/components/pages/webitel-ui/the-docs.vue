@@ -355,6 +355,11 @@ export default {
             value: 'page-header',
             route: 'page-header',
           },
+          {
+            name: 'Item Link',
+            value: 'item-link',
+            route: 'item-link',
+          },
         ].sort((a, b) => a.name.localeCompare(b.name)),
       };
     },
