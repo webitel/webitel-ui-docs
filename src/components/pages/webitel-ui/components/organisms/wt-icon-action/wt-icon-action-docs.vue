@@ -6,6 +6,18 @@
         <wt-icon-action
           action="edit"
         ></wt-icon-action>
+        <wt-icon-action
+          action="delete"
+        ></wt-icon-action>
+        <wt-icon-action
+          action="add"
+        ></wt-icon-action>
+        <wt-icon-action
+          action="history"
+        ></wt-icon-action>
+        <wt-icon-action
+          action="download"
+        ></wt-icon-action>
         <pre><code
           class="language-html"
         >
@@ -33,7 +45,13 @@ const properties = [
     value: 'action',
     type: 'String',
     required: true,
-    options: ['edit', 'delete'],
+    options: ['delete', 'edit', 'add', 'history', 'download'],
+  },
+  {
+    value: 'disabled',
+    code: '<wt-rounded-action disabled></wt-rounded-action>',
+    type: 'Boolean',
+    default: 'false',
   },
 ];
 
