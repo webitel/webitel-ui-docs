@@ -49,7 +49,7 @@ const properties = [
   },
   {
     value: 'disabled',
-    code: '<wt-rounded-action disabled></wt-rounded-action>',
+    code: '<wt-icon-action disabled></wt-icon-action>',
     type: 'Boolean',
     default: 'false',
   },
