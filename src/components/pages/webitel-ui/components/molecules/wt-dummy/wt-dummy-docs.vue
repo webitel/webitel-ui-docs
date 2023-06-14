@@ -1,0 +1,70 @@
+<template>
+  <section>
+    <h2>Dummy</h2>
+    <article>
+      <div class="example-wrapper">
+        <wt-dummy
+          :src="pic"
+          :size="150">
+        </wt-dummy>
+        <pre><code class="language-html">&lt;wt-dummy :src="./pic.svg" :locale="$t('empty.workspace')"&gt;&lt;/wt-dummy&gt;</code></pre>
+      </div>
+    </article>
+    <component-props
+      :properties="properties"
+    ></component-props>
+    <component-events
+      :events="events"
+    ></component-events>
+  </section>
+</template>
+
+<script>
+import Prism from 'prismjs';
+import pic from './pic.svg';
+
+export default {
+  name: 'wt-dummy-docs',
+  data: () => ({
+    pic,
+    properties: [
+      {
+        value: 'src',
+        code: '<wt-dummy :src="pic"></wt-dummy>',
+        type: 'String',
+      },
+      {
+        value: 'locale',
+        code: '<wt-dummy :locale="$t(\'empty.workspace\')"></wt-dummy>',
+        type: 'String',
+      },
+      {
+        value: 'showAction',
+        code: '<wt-dummy show-action></wt-dummy>',
+        type: 'Boolean',
+        description: 'The prop controls the display of the button for adding new items',
+      },
+      {
+        value: 'size',
+        code: '<wt-dummy size="200"></wt-dummy>',
+        type: '[String, Number]',
+      },
+    ],
+    events: [
+      {
+        value: 'create',
+      },
+    ],
+  }),
+  mounted() {
+    Prism.highlightAll();
+  },
+};
+</script>
+
+<style lang="scss" scoped>
+.example-wrapper .wt-dummy {
+  display: flex;
+  align-items: start;
+}
+</style>

@@ -183,6 +183,8 @@ import WtIconActionDocs
   from '../components/pages/webitel-ui/components/organisms/wt-icon-action/wt-icon-action-docs.vue';
 import WtItemLinkDocs
   from '../components/pages/webitel-ui/components/organisms/wt-item-link/wt-item-link-docs.vue';
+import WtDummyDocs
+  from '../components/pages/webitel-ui/components/molecules/wt-dummy/wt-dummy-docs.vue';
 
 const prefix = 'ui-';
 
@@ -424,6 +426,11 @@ const routes = [
             path: 'time-input',
             name: `${prefix}time-input-docs`,
             component: WtTimeInputDocs,
+          },
+          {
+            path: 'dummy',
+            name: `${prefix}dummy-docs`,
+            component: WtDummyDocs,
           },
 
           // organisms

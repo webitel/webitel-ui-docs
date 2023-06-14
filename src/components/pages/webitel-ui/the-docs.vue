@@ -4,7 +4,7 @@
       <template v-slot:header>
         <wt-headline>
           <wt-navigation-bar :nav="nav"/>
-          <h1>Webitel UI SDK v. 3.1.66</h1>
+          <h1>Webitel UI SDK v. 3.1.93</h1>
         </wt-headline>
       </template>
       <template v-slot:main>
@@ -359,6 +359,11 @@ export default {
             name: 'Item Link',
             value: 'item-link',
             route: 'item-link',
+          },
+          {
+            name: 'Dummy',
+            value: 'dummy',
+            route: 'dummy',
           },
         ].sort((a, b) => a.name.localeCompare(b.name)),
       };
