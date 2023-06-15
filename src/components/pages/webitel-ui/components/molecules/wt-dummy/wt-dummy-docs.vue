@@ -7,7 +7,7 @@
           :src="pic"
           :size="150">
         </wt-dummy>
-        <pre><code class="language-html">&lt;wt-dummy :src="./pic.svg" :locale="$t('empty.workspace')"&gt;&lt;/wt-dummy&gt;</code></pre>
+        <pre><code class="language-html">&lt;wt-dummy :src="pic" :size="150"&gt;&lt;/wt-dummy&gt;</code></pre>
       </div>
     </article>
     <component-props
@@ -42,12 +42,14 @@ export default {
         value: 'showAction',
         code: '<wt-dummy show-action></wt-dummy>',
         type: 'Boolean',
+        default: false,
         description: 'The prop controls the display of the button for adding new items',
       },
       {
         value: 'size',
         code: '<wt-dummy size="200"></wt-dummy>',
         type: '[String, Number]',
+        default: 200,
       },
     ],
     events: [
