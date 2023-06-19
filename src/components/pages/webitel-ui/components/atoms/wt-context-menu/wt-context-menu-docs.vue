@@ -4,7 +4,7 @@
     <article>
       <div class="example-wrapper">
         <wt-context-menu :options="options"></wt-context-menu>
-        <pre><code class="language-html">&lt;wt-context-menu :options="['Option-1', 'Option-2', 'Option-3', 'Option-4']"&gt;&lt;/wt-context-menu&gt;</code></pre>
+        <pre><code class="language-html">&lt;wt-context-menu :options="[{ text: 'Option-1' },...]"&gt;&lt;/wt-context-menu&gt;</code></pre>
       </div>
     </article>
     <component-props
@@ -22,13 +22,13 @@ import Prism from 'prismjs';
 export default {
   name: 'wt-context-menu-docs',
   data: () => ({
-    options: ['Option-1', 'Option-2', 'Option-3', 'Option-4'],
+    options: [{ text: 'Option-1' }, { text: 'Option-2' }, { text: 'Option-3' }, { text: 'Option-4' }],
     properties: [
       {
         value: 'options',
         code: ' <wt-context-menu :options="options"></wt-context-menu>',
         type: 'Array',
-        description: 'Can be [{ name: text }] or ["text"]. If options will be Array of objects, you can apply to name of option like "option.name" ',
+        description: 'Array of objects [{ text: text }]',
         required: true,
       },
       {
@@ -51,6 +51,12 @@ export default {
       },
       {
         value: 'width',
+        code: ' <wt-context-menu width="300px"></wt-context-menu>',
+        type: ['String'],
+        default: 'auto',
+      },
+      {
+        value: 'maxWidth',
         code: ' <wt-context-menu max-width="300px"></wt-context-menu>',
         type: ['String'],
         default: '300px',

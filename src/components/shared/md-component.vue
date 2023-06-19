@@ -1,5 +1,5 @@
 <template>
-  <p v-html="value">
+  <p class="md" v-html="md">
   </p>
 </template>
 
@@ -26,5 +26,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+.md :deep(a) {
+  color: revert;
+}
 </style>

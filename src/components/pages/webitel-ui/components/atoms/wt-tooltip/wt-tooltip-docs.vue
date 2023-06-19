@@ -3,7 +3,7 @@
     <h2>Tooltip</h2>
     <article>
       <h3>Tooltip implementation is based on
-        <a class="full-docs-link" href="https://floating-vue.starpad.dev/">Floating Vue</a>
+        <a class="full-docs-link" href="https://floating-ui.com/">Floating UI</a>
         lib
       </h3>
       <div class="example-wrapper">
@@ -60,26 +60,33 @@ export default {
         code: '<wt-tooltip placement="left"></wt-tooltip>',
         type: 'String',
         default: 'auto',
-        description: 'see [**Floating Vue**](https://floating-vue.starpad.dev/api/#placement) docs',
+        description: 'see [Floating UI](https://floating-ui.com/docs/tutorial#placements) docs, + "auto" for autoPlacement',
       },
       {
         value: 'popper-class',
         code: '<wt-tooltip popper-class="my-class"></wt-tooltip>',
         type: 'String',
-        description: 'see [**Floating Vue**](https://floating-vue.starpad.dev/api/#popperclass) docs',
+        description: 'add special class to a floating part of tooltip',
       },
       {
         value: 'triggers',
         code: '<wt-tooltip :triggers="[\'click\']"></wt-tooltip>',
         type: 'Array',
         default: '[\'hover\', \'focus\', \'touch\']',
-        description: 'see [**Floating Vue**](https://floating-vue.starpad.dev/api/#triggers) docs',
+        description: 'see [Floating Vue](https://floating-vue.starpad.dev/api/#triggers) docs',
       },
       {
         value: 'popper-triggers',
         code: '<wt-tooltip :popper-triggers="[\'hover\']"></wt-tooltip>',
         type: 'Array',
-        description: 'see [**Floating Vue**](https://floating-vue.starpad.dev/api/#poppertriggers) docs',
+        description: 'see [Floating Vue](https://floating-vue.starpad.dev/api/#poppertriggers) docs',
+      },
+      {
+        value: 'visible',
+        code: '<wt-tooltip visible></wt-tooltip>',
+        type: 'Boolean',
+        default: 'false',
+        description: 'Make tooltip visible',
       },
     ],
   }),
