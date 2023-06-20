@@ -124,6 +124,7 @@ export default [
   'sort-arrow-up',
   'arrow-down',
   'arrow-left',
+  'arrow-mix',
   'arrow-right',
   'arrow-up',
   'tts-download',
