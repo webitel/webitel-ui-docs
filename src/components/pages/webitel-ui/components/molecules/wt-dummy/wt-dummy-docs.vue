@@ -34,8 +34,8 @@ export default {
         type: 'String',
       },
       {
-        value: 'locale',
-        code: '<wt-dummy :locale="$t(\'empty.workspace\')"></wt-dummy>',
+        value: 'text',
+        code: '<wt-dummy :text="$t(\'empty.workspace\')"></wt-dummy>',
         type: 'String',
       },
       {
