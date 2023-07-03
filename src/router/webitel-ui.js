@@ -185,6 +185,9 @@ import WtItemLinkDocs
   from '../components/pages/webitel-ui/components/organisms/wt-item-link/wt-item-link-docs.vue';
 import WtDummyDocs
   from '../components/pages/webitel-ui/components/molecules/wt-dummy/wt-dummy-docs.vue';
+import TableStoreModuleDocs
+  from '../components/pages/webitel-ui/modules/table-store-module/table-store-module-docs.vue';
+import CardStoreModuleDocs from '../components/pages/webitel-ui/modules/card-store-module/card-store-module-docs.vue'
 
 const prefix = 'ui-';
 
@@ -630,6 +633,16 @@ const routes = [
             path: 'audit-form-module',
             name: `${prefix}audit-form-module`,
             component: AuditFormModuleDocs,
+          },
+          {
+            path: 'table-store-module',
+            name: `${prefix}table-store-module`,
+            component: TableStoreModuleDocs,
+          },
+          {
+            path: 'card-store-module',
+            name: `${prefix}card-store-module`,
+            component: CardStoreModuleDocs,
           },
         ],
       },
