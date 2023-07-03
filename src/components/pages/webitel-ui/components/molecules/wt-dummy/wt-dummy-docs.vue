@@ -42,7 +42,7 @@ export default {
         value: 'buttonText',
         code: '<wt-dummy :button-text="$t(\'reusable.save\')"></wt-dummy>',
         type: 'String',
-        default: 'ADD'
+        default: 'localized "ADD"'
       },
       {
         value: 'showAction',
