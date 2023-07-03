@@ -483,6 +483,16 @@ export default {
             value: 'audit-form-module',
             route: 'audit-form-module',
           },
+          {
+            name: 'Table Store',
+            value: 'table-store-module',
+            route: 'table-store-module',
+          },
+          {
+            name: 'Card Store',
+            value: 'card-store-module',
+            route: 'card-store-module',
+          },
         ],
       };
     },
