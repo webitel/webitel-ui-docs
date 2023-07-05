@@ -35,19 +35,19 @@
       properties: [
         {
           value: 'color',
-          code: '<wt-icon color="danger"></wt-icon>',
+          code: '<wt-indicator color="danger"></wt-indicator>',
           type: ['String', 'Number'],
           options: ['primary', 'secondary', 'success', 'danger', 'transfer', 'disabled', 'break-out'],
           default: 'secondary',
         },
         {
           value: 'text',
-          code: '<wt-icon text="Hello there!"></wt-icon>',
+          code: '<wt-indicator text="Hello there!"></wt-indicator>',
           type: 'String',
         },
         {
           value: 'size',
-          code: '<wt-icon size="sm"></wt-icon>',
+          code: '<wt-indicator size="sm"></wt-indicator>',
           type: 'String',
           options: ['sm', 'md'],
         },

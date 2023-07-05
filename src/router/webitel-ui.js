@@ -274,7 +274,7 @@ const routes = [
             component: WtContextMenuDocs,
           },
           {
-            path: 'components/chip',
+            path: 'chip',
             name: `${prefix}chip-docs`,
             component: WtChipDocs,
           },
