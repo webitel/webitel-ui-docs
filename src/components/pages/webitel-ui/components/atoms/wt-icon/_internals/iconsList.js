@@ -134,6 +134,7 @@ export default [
   'idle',
   'pin',
   'unpin',
+  'options',
 
   'preview-tag-video',
   'preview-tag-audio',

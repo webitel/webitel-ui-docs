@@ -41,6 +41,16 @@
           size="xl"
           badge
         ></wt-avatar>
+        <wt-avatar
+          :status="AbstractUserStatus.ACTIVE"
+          size="2xl"
+          badge
+        ></wt-avatar>
+        <wt-avatar
+          :status="AbstractUserStatus.ACTIVE"
+          size="3xl"
+          badge
+        ></wt-avatar>
       </div>
     </article>
     <component-props
@@ -96,7 +106,7 @@ export default {
         code: '<wt-avatar size="md"></wt-avatar>',
         type: 'String',
         default: 'md',
-        options: ['xs', 'sm', 'md', 'lg', 'xl'],
+        options: ['xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl'],
         description: 'Avatar size',
       },
       {
