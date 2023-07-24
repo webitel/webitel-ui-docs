@@ -187,7 +187,9 @@ import WtDummyDocs
   from '../components/pages/webitel-ui/components/molecules/wt-dummy/wt-dummy-docs.vue';
 import TableStoreModuleDocs
   from '../components/pages/webitel-ui/modules/table-store-module/table-store-module-docs.vue';
-import CardStoreModuleDocs from '../components/pages/webitel-ui/modules/card-store-module/card-store-module-docs.vue'
+import CardStoreModuleDocs from '../components/pages/webitel-ui/modules/card-store-module/card-store-module-docs.vue';
+import WtStepperDocs
+  from '../components/pages/webitel-ui/components/organisms/wt-stepper/wt-stepper-docs.vue';
 
 const prefix = 'ui-';
 
@@ -521,6 +523,11 @@ const routes = [
             path: 'item-link',
             name: `${prefix}item-link-docs`,
             component: WtItemLinkDocs,
+          },
+          {
+            path: 'stepper',
+            name: `${prefix}stepper-docs`,
+            component: WtStepperDocs,
           },
         ],
       },

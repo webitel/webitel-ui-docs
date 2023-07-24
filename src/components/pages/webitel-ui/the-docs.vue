@@ -365,6 +365,11 @@ export default {
             value: 'dummy',
             route: 'dummy',
           },
+          {
+            name: 'Stepper',
+            value: 'stepper',
+            route: 'stepper',
+          },
         ].sort((a, b) => a.name.localeCompare(b.name)),
       };
     },
