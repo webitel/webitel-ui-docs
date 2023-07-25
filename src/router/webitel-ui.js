@@ -99,6 +99,10 @@ import WtTableColumnSelectDocs
   from '../components/pages/webitel-ui/components/organisms/wt-table-column-select/wt-table-column-select-docs';
 import WtTableDocs
   from '../components/pages/webitel-ui/components/organisms/wt-table/wt-table-docs';
+import ComposablesDocs
+  from '../components/pages/webitel-ui/composables/composables-docs.vue';
+import UseDestroyableSortableDocs
+  from '../components/pages/webitel-ui/composables/use-destroyable-sortable/use-destroyable-sortable-docs.vue';
 import ClickawayDirectiveDocs
   from '../components/pages/webitel-ui/directives/clickaway-directive/clickaway-directive-docs';
 import DirectivesDocs
@@ -540,6 +544,18 @@ const routes = [
             path: 'truncate',
             name: `${prefix}truncate`,
             component: TruncateFilterDocs,
+          },
+        ],
+      },
+      {
+        path: 'composables',
+        name: `${prefix}composables`,
+        component: ComposablesDocs,
+        children: [
+          {
+            path: 'use-destroyable-sortable',
+            name: `${prefix}use-destroyable-sortable`,
+            component: UseDestroyableSortableDocs,
           },
         ],
       },

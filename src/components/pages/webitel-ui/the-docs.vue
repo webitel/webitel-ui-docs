@@ -4,7 +4,7 @@
       <template v-slot:header>
         <wt-headline>
           <wt-navigation-bar :nav="nav"/>
-          <h1>Webitel UI SDK v. 3.1.109</h1>
+          <h1>Webitel UI SDK v. 3.2.90</h1>
         </wt-headline>
       </template>
       <template v-slot:main>
@@ -44,6 +44,7 @@ export default {
         },
         this.styleNav,
         this.componentsNav,
+        this.composablesNav,
         this.filtersNav,
         this.localeNav,
         this.directivesNav,
@@ -383,6 +384,20 @@ export default {
             name: 'Truncate',
             value: 'truncate',
             route: 'truncate',
+          },
+        ],
+      };
+    },
+    composablesNav() {
+      return {
+        name: 'Composables',
+        value: 'composables',
+        route: '/ui/composables',
+        subNav: [
+          {
+            name: 'useDestroyableSortable',
+            value: 'use-destroyable-sortable',
+            route: 'use-destroyable-sortable',
           },
         ],
       };
