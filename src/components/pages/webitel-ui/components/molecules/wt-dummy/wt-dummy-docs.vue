@@ -63,6 +63,7 @@ export default {
         code: '<wt-dummy hidden-text></wt-dummy>',
         type: 'Boolean',
         default: false,
+        description: 'If value is true - hides in markup "text"',
       },
     ],
     events: [
