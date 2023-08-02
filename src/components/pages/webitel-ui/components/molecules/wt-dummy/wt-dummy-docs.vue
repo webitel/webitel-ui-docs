@@ -37,6 +37,7 @@ export default {
         value: 'text',
         code: '<wt-dummy :text="$t(\'empty.workspace\')"></wt-dummy>',
         type: 'String',
+        default: 'There are no records yet'
       },
       {
         value: 'buttonText',
@@ -56,6 +57,12 @@ export default {
         code: '<wt-dummy size="200"></wt-dummy>',
         type: '[String, Number]',
         default: 200,
+      },
+      {
+        value: 'hiddenText',
+        code: '<wt-dummy hidden-text></wt-dummy>',
+        type: 'Boolean',
+        default: false,
       },
     ],
     events: [
