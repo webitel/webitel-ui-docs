@@ -1,5 +1,6 @@
 export default [
   'adfs',
+  'azure',
   'instagram',
   'zoom-in',
   'zoom-out',
