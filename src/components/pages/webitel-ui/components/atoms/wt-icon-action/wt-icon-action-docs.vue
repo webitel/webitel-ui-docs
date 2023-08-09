@@ -18,6 +18,9 @@
         <wt-icon-action
           action="download"
         ></wt-icon-action>
+        <wt-icon-action
+          action="refresh"
+        ></wt-icon-action>
         <pre><code
           class="language-html"
         >
@@ -45,7 +48,7 @@ const properties = [
     value: 'action',
     type: 'String',
     required: true,
-    options: ['delete', 'edit', 'add', 'history', 'download'],
+    options: ['delete', 'edit', 'add', 'history', 'download', 'refresh'],
   },
   {
     value: 'disabled',
