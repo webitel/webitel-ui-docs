@@ -4,7 +4,7 @@
       <template v-slot:header>
         <wt-headline>
           <wt-navigation-bar :nav="nav"/>
-          <h1>Webitel UI SDK v. 3.2.103</h1>
+          <h1>Webitel UI SDK v. 3.2.113</h1>
         </wt-headline>
       </template>
       <template v-slot:main>
@@ -370,6 +370,11 @@ export default {
             name: 'Stepper',
             value: 'stepper',
             route: 'stepper',
+          },
+          {
+            name: 'Expansion Panel',
+            value: 'expansion-panel',
+            route: 'expansion-panel',
           },
         ].sort((a, b) => a.name.localeCompare(b.name)),
       };
