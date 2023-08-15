@@ -184,7 +184,7 @@ import BreakpointPluginDocs
 import AuditFormModuleDocs
   from '../components/pages/webitel-ui/modules/audit-form/audit-form-module-docs.vue';
 import WtIconActionDocs
-  from '../components/pages/webitel-ui/components/organisms/wt-icon-action/wt-icon-action-docs.vue';
+  from '../components/pages/webitel-ui/components/atoms/wt-icon-action/wt-icon-action-docs.vue';
 import WtItemLinkDocs
   from '../components/pages/webitel-ui/components/organisms/wt-item-link/wt-item-link-docs.vue';
 import WtDummyDocs
@@ -194,6 +194,8 @@ import TableStoreModuleDocs
 import CardStoreModuleDocs from '../components/pages/webitel-ui/modules/card-store-module/card-store-module-docs.vue';
 import WtStepperDocs
   from '../components/pages/webitel-ui/components/organisms/wt-stepper/wt-stepper-docs.vue';
+import WtExpansionPanelDocs
+  from '../components/pages/webitel-ui/components/organisms/wt-expansion-panel/wt-expansion-panel-docs.vue';
 
 const prefix = 'ui-';
 
@@ -532,6 +534,11 @@ const routes = [
             path: 'stepper',
             name: `${prefix}stepper-docs`,
             component: WtStepperDocs,
+          },
+          {
+            path: 'expansion-panel',
+            name: `${prefix}expansion-panel-docs`,
+            component: WtExpansionPanelDocs,
           },
         ],
       },
