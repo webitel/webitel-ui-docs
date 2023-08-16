@@ -4,7 +4,7 @@
     <article>
       <div class="example-wrapper">
         <wt-context-menu :options="options"></wt-context-menu>
-        <pre><code class="language-html">&lt;wt-context-menu :options="[{ text: 'Option-1' },...]"&gt;&lt;/wt-context-menu&gt;</code></pre>
+        <pre><code class="language-html">&lt;wt-context-menu :options="[{ text: 'Option-1' },{ text: 'Option-2', disabled: true },...]"&gt;&lt;/wt-context-menu&gt;</code></pre>
       </div>
     </article>
     <component-props
@@ -22,13 +22,13 @@ import Prism from 'prismjs';
 export default {
   name: 'wt-context-menu-docs',
   data: () => ({
-    options: [{ text: 'Option-1' }, { text: 'Option-2' }, { text: 'Option-3' }, { text: 'Option-4' }],
+    options: [{ text: 'Option-1' }, { text: 'Option-2', disabled: true }, { text: 'Option-3' }, { text: 'Option-4', disabled: true }],
     properties: [
       {
         value: 'options',
         code: ' <wt-context-menu :options="options"></wt-context-menu>',
         type: 'Array',
-        description: 'Array of objects [{ text: text }]',
+        description: 'Array of objects [{ text: text, ?disabled: boolean }]',
         required: true,
       },
       {
