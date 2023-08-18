@@ -68,6 +68,12 @@ const properties = [
     code: '<wt-page-header :secondary-action="close"></wt-page-header>',
   },
   {
+    value: 'secondaryDisabled',
+    type: 'Boolean',
+    default: false,
+    code: '<wt-page-header :secondary-disabled></wt-page-header>',
+  },
+  {
     value: 'hideSecondary',
     type: 'Boolean',
     default: false,
