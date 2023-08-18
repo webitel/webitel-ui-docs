@@ -11,6 +11,13 @@
       </div>
       <div class="example-wrapper">
         <wt-avatar
+          size="lg"
+          username="Daniil Lohvinov"
+        ></wt-avatar>
+        <pre><code class="language-html">&lt;wt-avatar size="lg" username="Daniil Lohvinov"&gt;&lt;/wt-avatar&gt;</code></pre>
+      </div>
+      <div class="example-wrapper">
+        <wt-avatar
           :status="AbstractUserStatus.ACTIVE"
           badge
         ></wt-avatar>
@@ -100,6 +107,12 @@ export default {
         code: '<wt-avatar :src="pic"></wt-avatar>',
         type: 'String',
         description: 'Avatar pic. IMPORTANT: if this pic is stored locally in project, pass to this prop only pic, imported and passed to data as property',
+      },
+      {
+        value: 'username',
+        code: '<wt-avatar username="Daniil Lohvinov"></wt-avatar>',
+        type: 'String',
+        description: 'If passed, avatar is letter-based (if not passed src)',
       },
       {
         value: 'size',
