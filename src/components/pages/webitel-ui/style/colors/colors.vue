@@ -1,451 +1,405 @@
 <template>
   <section class="colors">
-    <h2>Main Colors</h2>
+    <h2 class="colors-family-title">Main Colors</h2>
     <article
-      class="colors__family"
-      v-for="(colorFamily, key) of mainColors"
+      class="colors-family"
+      v-for="({ title, colors }, key) of mainColors"
       :key="key"
     >
-      <h3 class="colors__family-heading">{{ colorFamily.title }}</h3>
-      <div class="colors__family-wrapper">
-        <div
-          class="color-item"
-          v-for="(color, key) of colorFamily.colors"
-          :key="key"
-        >
-          <div
-            class="color-item__color"
-            :style="{background: `var(${color.color})`}"
-          ><strong :style="{color: `${color.textColor}`}">{{ color.code }}</strong>
-          </div>
-          <div class="color-item__text-wrapper">
-            <div class="color-item__name">{{ color.name }}</div>
-            <div class="color-item__code">{{ color.color }}</div>
-            <p class="color-item__description">{{ color.description }}</p>
-          </div>
-        </div>
-      </div>
+      <h3 class="color-title">{{ title }}</h3>
+      <wt-table
+        :headers="headers"
+        :data="colors"
+        :selectable="false"
+        :grid-actions="false"
+      >
+        <template v-slot:code="{ item }">
+          {{ w.getComputedStyle(w.document.documentElement).getPropertyValue(item.color) }}
+        </template>
+        <template v-slot:preview="{ item }">
+          <div class="color-preview" :style="{background: `var(${item.color})`}"></div>
+        </template>
+      </wt-table>
+    </article>
+
+    <h2>Palette</h2>
+    <article
+      class="colors-family"
+      v-for="({ title, colors }, key) of palette"
+      :key="key"
+    >
+      <h3 class="color-title">{{ title }}</h3>
+      <wt-table
+        :headers="headers"
+        :data="colors"
+        :selectable="false"
+        :grid-actions="false"
+      >
+        <template v-slot:code="{ item }">
+          {{ w.getComputedStyle(w.document.documentElement).getPropertyValue(item.color) }}
+        </template>
+        <template v-slot:preview="{ item }">
+          <div class="color-preview" :style="{background: `var(${item.color})`}"></div>
+        </template>
+      </wt-table>
     </article>
   </section>
 </template>
 
-<script>
-const ACCENT_COLOR_HUE = 42;
-const SECONDARY_COLOR_HUE = 202;
-const PAGE_BG_COLOR_HUE = 209;
-const POSITIVE_COLOR_HUE = 119;
-const NEGATIVE_COLOR_HUE = 11;
-const HOLD_COLOR_HUE = 54;
-const TRANSFER_COLOR_HUE = 227;
-const JOB_COLOR_HUE = 209;
-const ICON_COLOR_HUE = 202;
+<script setup>
+const w = window;
 
-const ACCENT_COLOR = `${ACCENT_COLOR_HUE}, 100%, 50%`;
-const MAIN_COLOR = `${ACCENT_COLOR_HUE}, 20%, 99%`;
-const CONTRAST_COLOR = `${ACCENT_COLOR_HUE}, 20%, 1%`;
-const SECONDARY_COLOR = `${SECONDARY_COLOR_HUE}, 20%, 90%`;
-const SECONDARY_COLOR_50 = `${SECONDARY_COLOR_HUE}, 22%, 94%`;
-const PAGE_BG_COLOR = `${PAGE_BG_COLOR_HUE}, 20%, 95%`;
-const HEADER_COLOR = `${PAGE_BG_COLOR_HUE}, 20%, 90%`;
-const POSITIVE_COLOR = `${POSITIVE_COLOR_HUE}, 60%, 40%`;
-const NEGATIVE_COLOR = `${NEGATIVE_COLOR_HUE}, 80%, 50%`;
-const HOLD_COLOR = `${HOLD_COLOR_HUE}, 80%, 50%`;
-const TRANSFER_COLOR = `${TRANSFER_COLOR_HUE}, 80%, 50%`;
-const JOB_COLOR = `${JOB_COLOR_HUE}, 96%, 57%`;
-const ICON_COLOR = `${ICON_COLOR_HUE}, 100%, 15%`;
-const LINK_COLOR = '205, 90%, 45%, 1';
-const LINK_HOVER_COLOR = '205, 90%, 60%, 1';
+const headers = [
+  { value: 'name', text: 'Name' },
+  { value: 'color', text: 'Variable' },
+  { value: 'code', text: 'Code' },
+  { value: 'preview', text: 'Preview' },
+];
 
-const MAIN_COLOR_OPACITY = 1;
-const DEFAULT_OPACITY = 0.8;
-const HOVER_OPACITY = 1;
-const ACTIVE_OPACITY = 1;
-// const FOCUS_OPACITY = 0.8;
-const DISABLED_OPACITY = 0.4;
+const mainColors = [
+  {
+    title: 'Main colors',
+    colors: [
+      {
 
-const FORM_PLACEHOLDER_OPACITY = 0.4;
-const FORM_PLACEHOLDER_OPACITY__HOVER = 0.6;
-const FORM_BORDER_DISABLED_OPACITY = 0.05;
+        color: '--accent-color',
+        name: 'Accent color',
+      },
+      {
 
-export default {
-  name: 'colors',
-  data: () => ({
-    mainColors: [
-      {
-        title: 'Main colors',
-        colors: [
-          {
-            textColor: '#fff',
-            code: `hsla(${ACCENT_COLOR}, ${MAIN_COLOR_OPACITY})`,
-            color: '--accent-color',
-            name: 'Accent color',
-          },
-          {
-            textColor: '#000',
-            code: `hsla(${MAIN_COLOR}, ${MAIN_COLOR_OPACITY})`,
-            color: '--main-color',
-            name: 'Main color',
-          },
-          {
-            textColor: '#fff',
-            code: `hsla(${CONTRAST_COLOR}, ${MAIN_COLOR_OPACITY})`,
-            color: '--contrast-color',
-            name: 'Contrast color',
-          },
-          {
-            textColor: '#000',
-            code: `hsla(${SECONDARY_COLOR}, ${MAIN_COLOR_OPACITY})`,
-            color: '--secondary-color',
-            name: 'Secondary color',
-          },
-          {
-            textColor: '#000',
-            code: `hsla(${SECONDARY_COLOR_50}, ${MAIN_COLOR_OPACITY})`,
-            color: '--secondary-color-50',
-            name: 'Secondary color 50',
-          },
-          {
-            textColor: '#000',
-            code: `hsla(${PAGE_BG_COLOR}, ${MAIN_COLOR_OPACITY})`,
-            color: '--page-bg-color',
-            name: 'Page background color',
-          },
-          {
-            textColor: '#000',
-            code: `hsla(${HEADER_COLOR}, ${MAIN_COLOR_OPACITY})`,
-            color: '--header-color',
-            name: 'Header color',
-          },
-          {
-            textColor: '#000',
-            code: `hsla(${ACCENT_COLOR}, 0.3)`,
-            color: '--accent-secondary-color',
-            name: 'Accent secondary color',
-          },
-        ],
+        color: '--main-color',
+        name: 'Main color',
       },
       {
-        title: 'Semantic colors',
-        colors: [
-          {
-            textColor: '#000',
-            code: `hsla(${CONTRAST_COLOR}, ${DISABLED_OPACITY})`,
-            color: '--disabled-color',
-            name: 'Disabled color',
-          },
-          {
-            textColor: '#000',
-            code: `hsla(${POSITIVE_COLOR}, ${DEFAULT_OPACITY})`,
-            color: '--true-color',
-            name: 'True color',
-          },
-          {
-            textColor: '#000',
-            code: `hsla(${POSITIVE_COLOR}, ${HOVER_OPACITY})`,
-            color: '--true--hover-color',
-            name: 'True hover color',
-          },
-          {
-            textColor: '#000',
-            code: `hsla(${NEGATIVE_COLOR}, ${DEFAULT_OPACITY})`,
-            color: '--false-color',
-            name: 'False color',
-          },
-          {
-            textColor: '#000',
-            code: `hsla(${NEGATIVE_COLOR}, ${HOVER_OPACITY})`,
-            color: '--false--hover-color',
-            name: 'False hover color',
-          },
-          {
-            textColor: '#000',
-            code: `hsla(${NEGATIVE_COLOR}, ${DEFAULT_OPACITY})`,
-            color: '--hold-color',
-            name: 'Hold color',
-          },
-          {
-            textColor: '#000',
-            code: `hsla(${HOLD_COLOR}, ${HOVER_OPACITY})`,
-            color: '--hold--hover-color',
-            name: 'Hold hover color',
-          },
-          {
-            textColor: '#000',
-            code: `hsla(${TRANSFER_COLOR}, ${DEFAULT_OPACITY})`,
-            color: '--transfer-color',
-            name: 'Transfer color',
-          },
-          {
-            textColor: '#000',
-            code: `hsla(${TRANSFER_COLOR}, ${HOVER_OPACITY})`,
-            color: '--transfer--hover-color',
-            name: 'Transfer hover color',
-          },
-          {
-            textColor: '#000',
-            code: `hsla(${JOB_COLOR}, ${DEFAULT_OPACITY})`,
-            color: '--job-color',
-            name: 'Job color',
-          },
-          {
-            textColor: '#000',
-            code: `hsla(${JOB_COLOR}, ${HOVER_OPACITY})`,
-            color: '--job--hover-color',
-            name: 'Job hover color',
-          },
-          {
-            textColor: '#000',
-            code: `hsla(${LINK_COLOR})`,
-            color: '--link-color',
-            name: 'Link color',
-          },
-          {
-            textColor: '#000',
-            code: `hsla(${LINK_HOVER_COLOR})`,
-            color: '--link--hover-color',
-            name: 'Link hover color',
-          },
-        ],
+
+        color: '--contrast-color',
+        name: 'Contrast color',
       },
       {
-        title: 'Icon colors',
-        colors: [
-          {
-            textColor: '#fff',
-            code: `hsla(${ICON_COLOR}, ${DEFAULT_OPACITY})`,
-            color: '--icon-color',
-            name: 'Icon color',
-          },
-          {
-            textColor: '#fff',
-            code: `hsla(${ICON_COLOR}, 0.25)`,
-            color: '--icon-color-secondary',
-            name: 'Icon secondary color',
-          },
-          {
-            textColor: '#fff',
-            code: `hsla(${ICON_COLOR}, ${HOVER_OPACITY})`,
-            color: '--icon-color--hover',
-            name: 'Icon hover color',
-          },
-          {
-            textColor: '#fff',
-            code: `hsla(${ICON_COLOR}, ${DISABLED_OPACITY})`,
-            color: '--icon-color-disabled',
-            name: 'Icon disabled color',
-          },
-        ],
+
+        color: '--secondary-color',
+        name: 'Secondary color',
       },
       {
-        title: 'Form colors',
-        colors: [
-          {
-            textColor: '#fff',
-            code: `hsla(${CONTRAST_COLOR}, ${MAIN_COLOR_OPACITY})`,
-            color: '--form-input-color',
-            name: 'User input color',
-          },
-          {
-            textColor: '#fff',
-            code: `hsla(${CONTRAST_COLOR}, ${DEFAULT_OPACITY})`,
-            color: '--form-label-color',
-            name: 'Form label color',
-          },
-          {
-            textColor: '#fff',
-            code: `hsla(${CONTRAST_COLOR}, ${HOVER_OPACITY})`,
-            color: '--form-label--hover-color',
-            name: 'Form label hover color',
-          },
-          {
-            textColor: '#fff',
-            code: `hsla(${CONTRAST_COLOR}, ${ACTIVE_OPACITY})`,
-            color: '--form-label--active-color',
-            name: 'Form label active color',
-          },
-          {
-            textColor: '#fff',
-            code: `hsla(${CONTRAST_COLOR}, ${DISABLED_OPACITY})`,
-            color: '--form-label--disabled-color',
-            name: 'Form label disabled color',
-          },
-          {
-            textColor: '#fff',
-            code: `hsla(${CONTRAST_COLOR}, ${DEFAULT_OPACITY})`,
-            color: '--form-border-color',
-            name: 'Form border color',
-          },
-          {
-            textColor: '#fff',
-            code: `hsla(${CONTRAST_COLOR}, ${HOVER_OPACITY})`,
-            color: '--form-border--hover-color',
-            name: 'Form border hover color',
-          },
-          {
-            textColor: '#fff',
-            code: `hsla(${CONTRAST_COLOR}, ${FORM_BORDER_DISABLED_OPACITY})`,
-            color: '--form-border--disabled-color',
-            name: 'Form border disabled color',
-          },
-          {
-            textColor: '#fff',
-            code: `hsla(${CONTRAST_COLOR}, ${FORM_PLACEHOLDER_OPACITY})`,
-            color: '--form-placeholder-color',
-            name: 'Form placeholder color',
-          },
-          {
-            textColor: '#fff',
-            code: `hsla(${CONTRAST_COLOR}, ${FORM_PLACEHOLDER_OPACITY__HOVER})`,
-            color: '--form-placeholder--hover-color',
-            name: 'Form placeholder hover color',
-          },
-          {
-            textColor: '#fff',
-            code: `hsla(${CONTRAST_COLOR}, ${DISABLED_OPACITY})`,
-            color: '--form-placeholder--disabled-color',
-            name: 'Form placeholder disabled color',
-          },
-        ],
+
+        color: '--secondary-color-50',
+        name: 'Secondary color 50',
       },
       {
-        title: 'Outline colors',
-        colors: [
-          {
-            textColor: '#fff',
-            code: `hsla(${CONTRAST_COLOR}, 0.4`,
-            color: '--form-outline-label-color',
-            name: 'Form outline label color',
-          },
-          {
-            textColor: '#fff',
-            code: `hsla(${CONTRAST_COLOR}, 0.7)`,
-            color: '--form-outline-border-color',
-            name: 'Form outline border color',
-          },
-          {
-            textColor: '#fff',
-            code: `hsla(${CONTRAST_COLOR}, 0.7)`,
-            color: '--form-outline-border--hover-color',
-            name: 'Form outline border hover color',
-          },
-          {
-            textColor: '#fff',
-            code: `hsla(${CONTRAST_COLOR},0.4)`,
-            color: '--form-outline-placeholder-color',
-            name: 'Form outline placeholder color',
-          },
-          {
-            textColor: '#fff',
-            code: `hsla(${CONTRAST_COLOR}, 0.7)`,
-            color: '--form-outline-placeholder--hover-color',
-            name: 'Form outline placeholder hover color',
-          },
-        ],
+
+        color: '--page-bg-color',
+        name: 'Page background color',
       },
       {
-        title: 'Text colors',
-        colors: [
-          {
-            textColor: '#fff',
-            code: `hsla(${CONTRAST_COLOR}, ${DEFAULT_OPACITY})`,
-            color: '--text-primary-color',
-            name: 'Text primary color',
-          },
-          {
-            textColor: '#fff',
-            code: `hsla(${CONTRAST_COLOR}, 0.7)`,
-            color: '--text-outline-color',
-            name: 'Text outline color',
-          },
-          {
-            textColor: '#000',
-            code: `hsla(${MAIN_COLOR}, ${DEFAULT_OPACITY})`,
-            color: '--text-contrast-color',
-            name: 'Text contrast color',
-          },
-          {
-            textColor: '#fff',
-            code: `hsla(${CONTRAST_COLOR}, ${DISABLED_OPACITY})`,
-            color: '--text--disabled-color',
-            name: 'Text disabled color',
-          },
-        ],
+
+        color: '--header-color',
+        name: 'Header color',
       },
       {
-        title: 'Chat colors',
-        colors: [
-          {
-            textColor: '#000',
-            code: `hsla(${ACCENT_COLOR}, 0.2)`,
-            color: '--chat-client-message-bg-color',
-            name: 'Client message background',
-          },
-          {
-            textColor: '#000',
-            code: `hsla(${CONTRAST_COLOR}, 0.1)`,
-            color: '--chat-agent-message-bg-color',
-            name: 'Client message background',
-          },
-          {
-            textColor: '#000',
-            code: `hsla(${ACCENT_COLOR}, 0.2)`,
-            color: '--chat-client-attachment-bg-color',
-            name: 'Agent message attachment background',
-          },
-          {
-            textColor: '#000',
-            code: `hsla(${SECONDARY_COLOR_50}, 1)`,
-            color: '--chat-agent-attachment-bg-color',
-            name: 'Agent message attachment background',
-          },
-        ],
+
+        color: '--accent-secondary-color',
+        name: 'Accent secondary color',
       },
     ],
-  }),
+  },
+  {
+    title: 'Semantic colors',
+    colors: [
+      {
+
+        color: '--disabled-color',
+        name: 'Disabled color',
+      },
+      {
+
+        color: '--true-color',
+        name: 'True color',
+      },
+      {
+
+        color: '--true--hover-color',
+        name: 'True hover color',
+      },
+      {
+
+        color: '--false-color',
+        name: 'False color',
+      },
+      {
+
+        color: '--false--hover-color',
+        name: 'False hover color',
+      },
+      {
+
+        color: '--hold-color',
+        name: 'Hold color',
+      },
+      {
+
+        color: '--hold--hover-color',
+        name: 'Hold hover color',
+      },
+      {
+
+        color: '--transfer-color',
+        name: 'Transfer color',
+      },
+      {
+
+        color: '--transfer--hover-color',
+        name: 'Transfer hover color',
+      },
+      {
+
+        color: '--job-color',
+        name: 'Job color',
+      },
+      {
+
+        color: '--job--hover-color',
+        name: 'Job hover color',
+      },
+      {
+
+        color: '--link-color',
+        name: 'Link color',
+      },
+      {
+
+        color: '--link--hover-color',
+        name: 'Link hover color',
+      },
+    ],
+  },
+  {
+    title: 'Icon colors',
+    colors: [
+      {
+
+        color: '--icon-color',
+        name: 'Icon color',
+      },
+      {
+
+        color: '--icon-color-secondary',
+        name: 'Icon secondary color',
+      },
+      {
+
+        color: '--icon-color--hover',
+        name: 'Icon hover color',
+      },
+      {
+
+        color: '--icon-color-disabled',
+        name: 'Icon disabled color',
+      },
+    ],
+  },
+  {
+    title: 'Form colors',
+    colors: [
+      {
+
+        color: '--form-input-color',
+        name: 'User input color',
+      },
+      {
+
+        color: '--form-label-color',
+        name: 'Form label color',
+      },
+      {
+
+        color: '--form-label--hover-color',
+        name: 'Form label hover color',
+      },
+      {
+
+        color: '--form-label--active-color',
+        name: 'Form label active color',
+      },
+      {
+
+        color: '--form-label--disabled-color',
+        name: 'Form label disabled color',
+      },
+      {
+
+        color: '--form-border-color',
+        name: 'Form border color',
+      },
+      {
+
+        color: '--form-border--hover-color',
+        name: 'Form border hover color',
+      },
+      {
+
+        color: '--form-border--disabled-color',
+        name: 'Form border disabled color',
+      },
+      {
+
+        color: '--form-placeholder-color',
+        name: 'Form placeholder color',
+      },
+    ],
+  },
+  {
+    title: 'Outline colors',
+    colors: [
+      {
+
+        color: '--form-outline-label-color',
+        name: 'Form outline label color',
+      },
+      {
+
+        color: '--form-outline-border-color',
+        name: 'Form outline border color',
+      },
+      {
+
+        color: '--form-outline-border--hover-color',
+        name: 'Form outline border hover color',
+      },
+    ],
+  },
+  {
+    title: 'Text colors',
+    colors: [
+      {
+
+        color: '--text-primary-color',
+        name: 'Text primary color',
+      },
+      {
+
+        color: '--text-outline-color',
+        name: 'Text outline color',
+      },
+      {
+
+        color: '--text-contrast-color',
+        name: 'Text contrast color',
+      },
+      {
+
+        color: '--text--disabled-color',
+        name: 'Text disabled color',
+      },
+    ],
+  },
+  {
+    title: 'Chat colors',
+    colors: [
+      {
+
+        color: '--chat-client-message-bg-color',
+        name: 'Client message background',
+      },
+      {
+
+        color: '--chat-agent-message-bg-color',
+        name: 'Client message background',
+      },
+      {
+
+        color: '--chat-client-attachment-bg-color',
+        name: 'Agent message attachment background',
+      },
+      {
+
+        color: '--chat-agent-attachment-bg-color',
+        name: 'Agent message attachment background',
+      },
+    ],
+  },
+];
+
+const paletteRed = {
+  title: 'red',
+  colors: [
+    { color: '--red-lighten-5', name: 'Red Lighten 5' },
+    { color: '--red-lighten-4', name: 'Red Lighten 4' },
+    { color: '--red-lighten-3', name: 'Red Lighten 3' },
+    { color: '--red-lighten-2', name: 'Red Lighten 2' },
+    { color: '--red-lighten-1', name: 'Red Lighten 1' },
+    { color: '--red-darken-1', name: 'Red Darken 1' },
+    { color: '--red-darken-2', name: 'Red Darken 2' },
+    { color: '--red-darken-3', name: 'Red Darken 3' },
+    { color: '--red-darken-4', name: 'Red Darken 4' },
+    { color: '--red-accent-1', name: 'Red Accent 1' },
+    { color: '--red-accent-2', name: 'Red Accent 2' },
+    { color: '--red-accent-3', name: 'Red Accent 3' },
+    { color: '--red-accent-4', name: 'Red Accent 4' },
+  ],
 };
+
+const changeColor = (input, replacements) => {
+  const capitalize = (str) => str.charAt(0).toUpperCase() + str.slice(1);
+  let result = JSON.stringify(input);
+  replacements.forEach(({ from, to }) => result = result.replaceAll(from, to));
+  replacements.forEach(({ from, to }) => result = result.replaceAll(capitalize(from), capitalize(to)));
+  return JSON.parse(result);
+};
+
+const palette = [
+  paletteRed,
+  changeColor(paletteRed, [{ from: 'red', to: 'pink' }]),
+  changeColor(paletteRed, [{ from: 'red', to: 'purple' }]),
+  changeColor(paletteRed, [{ from: 'red', to: 'deep-purple' }]),
+  changeColor(paletteRed, [{ from: 'red', to: 'indigo' }]),
+  changeColor(paletteRed, [{ from: 'red', to: 'blue' }]),
+  changeColor(paletteRed, [{ from: 'red', to: 'light-blue' }]),
+  changeColor(paletteRed, [{ from: 'red', to: 'cyan' }]),
+  changeColor(paletteRed, [{ from: 'red', to: 'teal' }]),
+  changeColor(paletteRed, [{ from: 'red', to: 'green' }]),
+  changeColor(paletteRed, [{ from: 'red', to: 'light-green' }]),
+  changeColor(paletteRed, [{ from: 'red', to: 'lime' }]),
+  changeColor(paletteRed, [{ from: 'red', to: 'yellow' }]),
+  changeColor(paletteRed, [{ from: 'red', to: 'amber' }]),
+  changeColor(paletteRed, [{ from: 'red', to: 'orange' }]),
+  changeColor(paletteRed, [{ from: 'red', to: 'deep-orange' }]),
+  {
+    title: 'grey',
+    colors: [
+      { color: '--grey-lighten-5', name: 'Grey Lighten 5' },
+      { color: '--grey-lighten-4', name: 'Grey Lighten 4' },
+      { color: '--grey-lighten-3', name: 'Grey Lighten 3' },
+      { color: '--grey-lighten-2', name: 'Grey Lighten 2' },
+      { color: '--grey-lighten-1', name: 'Grey Lighten 1' },
+      { color: '--grey-darken-1', name: 'Grey Darken 1' },
+      { color: '--grey-darken-2', name: 'Grey Darken 2' },
+      { color: '--grey-darken-3', name: 'Grey Darken 3' },
+      { color: '--grey-darken-4', name: 'Grey Darken 4' },
+      { color: '--grey-darken-5', name: 'Grey Darken 5' },
+    ],
+  },
+];
 </script>
 
 <style lang="scss" scoped>
-.color-family {
-  margin-bottom: 30px;
-}
-
-.colors__family-wrapper {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 460px);
-  grid-gap: 20px;
-}
-
-.color-item {
+.colors, .colors-family {
   display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
 }
 
-.color-item__color {
-  flex: 0 0 200px;
-  display: flex;
-  height: 60px;
-  padding: 10px;
-  box-sizing: border-box;
-  box-shadow: var(--box-shadow);
+.colors-family-title {
+  @extend %typo-heading-1;
+}
+
+.color-title {
+  @extend %typo-heading-2;
+}
+
+.color-preview {
+  width: 120px;
+  height: 40px;
   border-radius: var(--border-radius);
-}
-
-.color-item__text-wrapper {
-  margin-left: 10px;
-
-  > * {
-    margin-bottom: 5px;
-  }
-}
-
-.color-item__name {
-  font-weight: bold;
-}
-
-.color-item__code {
-  white-space: nowrap;
-}
-
-.color-item__description {
+  box-shadow: var(--elevation-10);
 }
 </style>
