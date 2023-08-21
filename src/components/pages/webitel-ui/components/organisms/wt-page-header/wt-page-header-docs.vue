@@ -48,13 +48,13 @@ const properties = [
     value: 'primaryDisabled',
     type: 'Boolean',
     default: false,
-    code: '<wt-page-header :primary-disabled></wt-page-header>',
+    code: '<wt-page-header primary-disabled></wt-page-header>',
   },
   {
     value: 'hidePrimary',
     type: 'Boolean',
     default: false,
-    code: '<wt-page-header :hide-primary></wt-page-header>'
+    code: '<wt-page-header hide-primary></wt-page-header>'
   },
   {
     value: 'secondaryText',
@@ -68,10 +68,16 @@ const properties = [
     code: '<wt-page-header :secondary-action="close"></wt-page-header>',
   },
   {
+    value: 'secondaryDisabled',
+    type: 'Boolean',
+    default: false,
+    code: '<wt-page-header secondary-disabled></wt-page-header>',
+  },
+  {
     value: 'hideSecondary',
     type: 'Boolean',
     default: false,
-    code: '<wt-page-header :hide-secondary></wt-page-header>'
+    code: '<wt-page-header hide-secondary></wt-page-header>'
   },
 ];
 const slots = [
