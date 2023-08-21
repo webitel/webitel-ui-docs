@@ -132,6 +132,7 @@ export default [
   'stt',
   'stt-download',
   'stt-search',
+  'scorecard',
   'idle',
   'pin',
   'unpin',
