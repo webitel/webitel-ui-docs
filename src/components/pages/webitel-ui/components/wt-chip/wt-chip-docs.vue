@@ -63,7 +63,7 @@
 </script>
 
 <style lang="scss" scoped>
-  @import '~@webitel/ui-sdk/src/css/components/atoms/wt-chip/wt-chip';
+  @import '../../../../../../node_modules/@webitel/ui-sdk/src/components/wt-chip/wt-chip';
   .my-div {
     @extend .wt-chip;
   }

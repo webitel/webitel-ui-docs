@@ -6,7 +6,11 @@
       <pre class="language-javascript">
         <code>
           // store/index.js
-          import now from '@webitel/cc-ui-sdk/src/store/modules/now/reactive-now';
+         import ReactiveNowStoreModule from '@webitel/ui-sdk/src/store/ReactiveNowStoreModule/ReactiveNowStoreModule';
+
+          modules: {
+            now: new ReactiveNowStoreModule().getModule(),
+          },
         </code>
 
         <code>
@@ -35,10 +39,13 @@
   </section>
 </template>
 
-<script>
-export default {
-  name: 'reactive-now',
-};
+<script setup>
+import Prism from 'prismjs';
+import { onMounted } from 'vue';
+
+onMounted(() => {
+  Prism.highlightAll();
+});
 </script>
 
 <style lang="scss" scoped>

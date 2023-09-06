@@ -23,11 +23,6 @@ export default {
     nav() {
       return [
         {
-          name: 'Webitel CC UI',
-          value: 'webitel-cc-ui',
-          route: '/cc-ui',
-        },
-        {
           name: 'Webitel Flow UI',
           value: 'webitel-flow-ui',
           route: '/flow-ui'
@@ -376,6 +371,11 @@ export default {
             value: 'expansion-panel',
             route: 'expansion-panel',
           },
+          {
+            name: 'Agent Status Timers',
+            value: 'agent-status-timers',
+            route: 'agent-status-timers',
+          },
         ].sort((a, b) => a.name.localeCompare(b.name)),
       };
     },
@@ -518,6 +518,11 @@ export default {
             value: 'card-store-module',
             route: 'card-store-module',
           },
+          {
+            name: 'Agent Status Select',
+            value: 'agent-status-select-module',
+            route: 'agent-status-select-module',
+          },
         ],
       };
     },
@@ -609,6 +614,11 @@ export default {
             name: 'modules/Api Store Module',
             value: 'api-store-module',
             route: 'api-store-module',
+          },
+          {
+            name: 'modules/Reactive Now Store Module',
+            value: 'reactive-now-store-module',
+            route: 'reactive-now-store-module',
           },
           {
             name: 'helpers/Get Namespaced State',

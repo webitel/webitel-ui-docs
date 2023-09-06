@@ -1,104 +1,106 @@
 import Changelog from '../components/pages/webitel-ui/changelog';
 import WtAvatarDocs
-  from '../components/pages/webitel-ui/components/atoms/wt-avatar/wt-avatar-docs';
+  from '../components/pages/webitel-ui/components/wt-avatar/wt-avatar-docs';
 import WtBadgeDocs
-  from '../components/pages/webitel-ui/components/atoms/wt-badge/wt-badge-docs';
+  from '../components/pages/webitel-ui/components/wt-badge/wt-badge-docs';
 import WtBtnDocs
-  from '../components/pages/webitel-ui/components/atoms/wt-button/wt-button-docs';
+  from '../components/pages/webitel-ui/components/wt-button/wt-button-docs';
+import WtCcAgentStatusTimersDocs
+  from '../components/pages/webitel-ui/components/wt-cc-agent-status-timers/wt-cc-agent-status-timers-docs.vue';
 import WtChipDocs
-  from '../components/pages/webitel-ui/components/atoms/wt-chip/wt-chip-docs';
+  from '../components/pages/webitel-ui/components/wt-chip/wt-chip-docs';
 import WtContextMenuDocs
-  from '../components/pages/webitel-ui/components/atoms/wt-context-menu/wt-context-menu-docs';
+  from '../components/pages/webitel-ui/components/wt-context-menu/wt-context-menu-docs';
 import WtCopyAction
-  from '../components/pages/webitel-ui/components/molecules/wt-copy-action/wt-copy-action';
+  from '../components/pages/webitel-ui/components/wt-copy-action/wt-copy-action';
 import WtDividerDocs
-  from '../components/pages/webitel-ui/components/atoms/wt-divider/wt-divider-docs';
+  from '../components/pages/webitel-ui/components/wt-divider/wt-divider-docs';
 import WtIconDocs
-  from '../components/pages/webitel-ui/components/atoms/wt-icon/wt-icon-docs';
+  from '../components/pages/webitel-ui/components/wt-icon/wt-icon-docs';
 import WtIndicatorDocs
-  from '../components/pages/webitel-ui/components/atoms/wt-indicator/wt-indicator-docs';
+  from '../components/pages/webitel-ui/components/wt-indicator/wt-indicator-docs';
 import WtInputInfoDocs
-  from '../components/pages/webitel-ui/components/atoms/wt-input-info/wt-input-info-docs';
+  from '../components/pages/webitel-ui/components/wt-input-info/wt-input-info-docs';
 import WtLoaderDocs
-  from '../components/pages/webitel-ui/components/atoms/wt-loader/wt-loader-docs';
+  from '../components/pages/webitel-ui/components/wt-loader/wt-loader-docs';
 import WtLRoundedActionDocs
-  from '../components/pages/webitel-ui/components/atoms/wt-rounded-action/wt-rounded-action-docs';
+  from '../components/pages/webitel-ui/components/wt-rounded-action/wt-rounded-action-docs';
 import WtTooltipDocs
-  from '../components/pages/webitel-ui/components/atoms/wt-tooltip/wt-tooltip-docs';
+  from '../components/pages/webitel-ui/components/wt-tooltip/wt-tooltip-docs';
 import ComponentsDocs
   from '../components/pages/webitel-ui/components/components-docs';
 import WtButtonSelectDocs
-  from '../components/pages/webitel-ui/components/molecules/wt-button-select/wt-button-select-docs';
+  from '../components/pages/webitel-ui/components/wt-button-select/wt-button-select-docs';
 import WtCheckboxDocs
-  from '../components/pages/webitel-ui/components/molecules/wt-checkbox/wt-checkbox-docs';
+  from '../components/pages/webitel-ui/components/wt-checkbox/wt-checkbox-docs';
 import WtDatepickerDocs
-  from '../components/pages/webitel-ui/components/molecules/wt-datepicker/wt-datepicker-docs';
+  from '../components/pages/webitel-ui/components/wt-datepicker/wt-datepicker-docs';
 import WtHintDocs
-  from '../components/pages/webitel-ui/components/molecules/wt-hint/wt-hint-docs';
+  from '../components/pages/webitel-ui/components/wt-hint/wt-hint-docs';
 import WtIconBtnDocs
-  from '../components/pages/webitel-ui/components/molecules/wt-icon-btn/wt-icon-btn-docs';
+  from '../components/pages/webitel-ui/components/wt-icon-btn/wt-icon-btn-docs';
 import WtInputDocs
-  from '../components/pages/webitel-ui/components/molecules/wt-input/wt-input-docs';
+  from '../components/pages/webitel-ui/components/wt-input/wt-input-docs';
 import WtLabelDocs
-  from '../components/pages/webitel-ui/components/molecules/wt-label/wt-label-docs';
+  from '../components/pages/webitel-ui/components/wt-label/wt-label-docs';
 import WtNotificationDocs
-  from '../components/pages/webitel-ui/components/molecules/wt-notification/wt-notification-docs';
+  from '../components/pages/webitel-ui/components/wt-notification/wt-notification-docs';
 import WtPopupDocs
-  from '../components/pages/webitel-ui/components/molecules/wt-popup/wt-popup-docs';
+  from '../components/pages/webitel-ui/components/wt-popup/wt-popup-docs';
 import WtLoadBarDocs
-  from '../components/pages/webitel-ui/components/molecules/wt-load-bar/wt-load-bar-docs';
+  from '../components/pages/webitel-ui/components/wt-load-bar/wt-load-bar-docs';
 import WtProgressBarDocs
-  from '../components/pages/webitel-ui/components/molecules/wt-progress-bar/wt-progress-bar-docs';
+  from '../components/pages/webitel-ui/components/wt-progress-bar/wt-progress-bar-docs';
 import WtRadioDocs
-  from '../components/pages/webitel-ui/components/molecules/wt-radio/wt-radio-docs';
+  from '../components/pages/webitel-ui/components/wt-radio/wt-radio-docs';
 import WtSearchBarDocs
-  from '../components/pages/webitel-ui/components/molecules/wt-search-bar/wt-search-bar-docs';
+  from '../components/pages/webitel-ui/components/wt-search-bar/wt-search-bar-docs';
 import WtSelectDocs
-  from '../components/pages/webitel-ui/components/molecules/wt-select/wt-select-docs';
+  from '../components/pages/webitel-ui/components/wt-select/wt-select-docs';
 import WtSliderDocs
-  from '../components/pages/webitel-ui/components/molecules/wt-slider/wt-slider-docs';
+  from '../components/pages/webitel-ui/components/wt-slider/wt-slider-docs';
 import WtSwitcherDocs
-  from '../components/pages/webitel-ui/components/molecules/wt-switcher/wt-switcher-docs';
+  from '../components/pages/webitel-ui/components/wt-switcher/wt-switcher-docs';
 import WtTabsDocs
-  from '../components/pages/webitel-ui/components/molecules/wt-tabs/wt-tabs-docs';
+  from '../components/pages/webitel-ui/components/wt-tabs/wt-tabs-docs';
 import WtTagsInputDocs
-  from '../components/pages/webitel-ui/components/molecules/wt-tags-input/wt-tags-input-docs';
+  from '../components/pages/webitel-ui/components/wt-tags-input/wt-tags-input-docs';
 import WtTextareaDocs
-  from '../components/pages/webitel-ui/components/molecules/wt-textarea/wt-textarea-docs';
+  from '../components/pages/webitel-ui/components/wt-textarea/wt-textarea-docs';
 import WtTimeInputDocs
-  from '../components/pages/webitel-ui/components/molecules/wt-time-input/wt-time-input-docs';
+  from '../components/pages/webitel-ui/components/wt-time-input/wt-time-input-docs';
 import WtTimepickerDocs
-  from '../components/pages/webitel-ui/components/molecules/wt-timepicker/wt-timepicker-docs';
+  from '../components/pages/webitel-ui/components/wt-timepicker/wt-timepicker-docs';
 import WtAppHeaderDocs
-  from '../components/pages/webitel-ui/components/organisms/wt-app-header/wt-app-header-docs';
+  from '../components/pages/webitel-ui/components/wt-app-header/wt-app-header-docs';
 import WtErrorPageDocs
-  from '../components/pages/webitel-ui/components/organisms/wt-error-page/wt-error-page-docs';
+  from '../components/pages/webitel-ui/components/wt-error-page/wt-error-page-docs';
 import WtFiltersPanelWrapperDocs
-  from '../components/pages/webitel-ui/components/organisms/wt-filters-panel-wrapper/wt-table-actions-docs';
+  from '../components/pages/webitel-ui/components/wt-filters-panel-wrapper/wt-table-actions-docs';
 import WtHeadlineNavDocs
-  from '../components/pages/webitel-ui/components/organisms/wt-headline-nav/wt-headline-nav-docs';
+  from '../components/pages/webitel-ui/components/wt-headline-nav/wt-headline-nav-docs';
 import WtHeadlineDocs
-  from '../components/pages/webitel-ui/components/organisms/wt-headline/wt-headline-docs';
+  from '../components/pages/webitel-ui/components/wt-headline/wt-headline-docs';
 import WtNavigationBarDocs
-  from '../components/pages/webitel-ui/components/organisms/wt-navigation-bar/wt-navigation-bar-docs';
+  from '../components/pages/webitel-ui/components/wt-navigation-bar/wt-navigation-bar-docs';
 import WtNotificationsBarDocs
-  from '../components/pages/webitel-ui/components/organisms/wt-notifications-bar/wt-notifications-bar-docs';
+  from '../components/pages/webitel-ui/components/wt-notifications-bar/wt-notifications-bar-docs';
 import WtPageHeaderDocs
-  from '../components/pages/webitel-ui/components/organisms/wt-page-header/wt-page-header-docs.vue';
+  from '../components/pages/webitel-ui/components/wt-page-header/wt-page-header-docs.vue';
 import WtPageWrapperDocs
-  from '../components/pages/webitel-ui/components/organisms/wt-page-wrapper/wt-page-wrapper-docs';
+  from '../components/pages/webitel-ui/components/wt-page-wrapper/wt-page-wrapper-docs';
 import WtPaginationDocs
-  from '../components/pages/webitel-ui/components/organisms/wt-pagination/wt-pagination-docs';
+  from '../components/pages/webitel-ui/components/wt-pagination/wt-pagination-docs';
 import WtPlayerDocs
-  from '../components/pages/webitel-ui/components/organisms/wt-player/wt-player-docs';
+  from '../components/pages/webitel-ui/components/wt-player/wt-player-docs';
 import WtStatusSelectDocs
-  from '../components/pages/webitel-ui/components/organisms/wt-status-select/wt-status-select-docs';
+  from '../components/pages/webitel-ui/components/wt-status-select/wt-status-select-docs';
 import WtTableActionsDocs
-  from '../components/pages/webitel-ui/components/organisms/wt-table-actions/wt-table-actions-docs';
+  from '../components/pages/webitel-ui/components/wt-table-actions/wt-table-actions-docs';
 import WtTableColumnSelectDocs
-  from '../components/pages/webitel-ui/components/organisms/wt-table-column-select/wt-table-column-select-docs';
+  from '../components/pages/webitel-ui/components/wt-table-column-select/wt-table-column-select-docs';
 import WtTableDocs
-  from '../components/pages/webitel-ui/components/organisms/wt-table/wt-table-docs';
+  from '../components/pages/webitel-ui/components/wt-table/wt-table-docs';
 import ComposablesDocs
   from '../components/pages/webitel-ui/composables/composables-docs.vue';
 import UseDestroyableSortableDocs
@@ -125,6 +127,8 @@ import LocaleDocs from '../components/pages/webitel-ui/locale/locale-docs';
 import MixinsDocs from '../components/pages/webitel-ui/mixins/mixins-docs';
 import ValidationMixinDocs
   from '../components/pages/webitel-ui/mixins/validation-mixin/validation-mixin-docs';
+import AgentStatusSelectDocs
+  from '../components/pages/webitel-ui/modules/agent-status-select/agent-status-select-docs.vue';
 import DataFilterModuleDocs
   from '../components/pages/webitel-ui/modules/data-filter-module/data-filter-module-docs';
 import ExportCSVModuleDocs
@@ -162,6 +166,8 @@ import ApiStoreModuleDocs
   from '../components/pages/webitel-ui/store/modules/api-store-module-docs.vue';
 import BaseStoreModuleDocs
   from '../components/pages/webitel-ui/store/modules/base-store-module-docs';
+import ReactiveNowStoreModuleDocs
+  from '../components/pages/webitel-ui/store/modules/reactive-now-store-module-docs.vue';
 import StoreDocs from '../components/pages/webitel-ui/store/store-docs';
 import BorderRadius
   from '../components/pages/webitel-ui/style/border-radius/border-radius';
@@ -184,18 +190,18 @@ import BreakpointPluginDocs
 import AuditFormModuleDocs
   from '../components/pages/webitel-ui/modules/audit-form/audit-form-module-docs.vue';
 import WtIconActionDocs
-  from '../components/pages/webitel-ui/components/atoms/wt-icon-action/wt-icon-action-docs.vue';
+  from '../components/pages/webitel-ui/components/wt-icon-action/wt-icon-action-docs.vue';
 import WtItemLinkDocs
-  from '../components/pages/webitel-ui/components/organisms/wt-item-link/wt-item-link-docs.vue';
+  from '../components/pages/webitel-ui/components/wt-item-link/wt-item-link-docs.vue';
 import WtDummyDocs
-  from '../components/pages/webitel-ui/components/molecules/wt-dummy/wt-dummy-docs.vue';
+  from '../components/pages/webitel-ui/components/wt-dummy/wt-dummy-docs.vue';
 import TableStoreModuleDocs
   from '../components/pages/webitel-ui/modules/table-store-module/table-store-module-docs.vue';
 import CardStoreModuleDocs from '../components/pages/webitel-ui/modules/card-store-module/card-store-module-docs.vue';
 import WtStepperDocs
-  from '../components/pages/webitel-ui/components/organisms/wt-stepper/wt-stepper-docs.vue';
+  from '../components/pages/webitel-ui/components/wt-stepper/wt-stepper-docs.vue';
 import WtExpansionPanelDocs
-  from '../components/pages/webitel-ui/components/organisms/wt-expansion-panel/wt-expansion-panel-docs.vue';
+  from '../components/pages/webitel-ui/components/wt-expansion-panel/wt-expansion-panel-docs.vue';
 
 const prefix = 'ui-';
 
@@ -540,6 +546,11 @@ const routes = [
             name: `${prefix}expansion-panel-docs`,
             component: WtExpansionPanelDocs,
           },
+          {
+            path: 'agent-status-timers',
+            name: `${prefix}agent-status-timers`,
+            component: WtCcAgentStatusTimersDocs,
+          },
         ],
       },
       {
@@ -674,6 +685,11 @@ const routes = [
             name: `${prefix}card-store-module`,
             component: CardStoreModuleDocs,
           },
+          {
+            path: 'agent-status-select-module',
+            name: `${prefix}agent-status-select-module`,
+            component: AgentStatusSelectDocs,
+          },
         ],
       },
       {
@@ -759,6 +775,11 @@ const routes = [
             path: 'api-store-module',
             name: `${prefix}api-store-module`,
             component: ApiStoreModuleDocs,
+          },
+          {
+            path: 'reactive-now-store-module',
+            name: `${prefix}reactive-now-store-module`,
+            component: ReactiveNowStoreModuleDocs,
           },
           {
             path: 'get-namespaced-state',

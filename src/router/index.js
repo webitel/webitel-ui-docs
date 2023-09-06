@@ -1,8 +1,6 @@
-import Vue from 'vue';
 import { createRouter, createWebHistory } from 'vue-router';
 
 import WebitelUi from './webitel-ui';
-import WebitelCcUi from './webitel-cc-ui';
 import WebitelFlowUi from './webitel-flow-ui';
 
 const router = createRouter({
@@ -13,7 +11,6 @@ const router = createRouter({
       redirect: '/ui'
     },
     ...WebitelUi,
-    ...WebitelCcUi,
     ...WebitelFlowUi,
   ],
   // eslint-disable-next-line no-unused-vars
@@ -26,15 +23,5 @@ const router = createRouter({
     return { left: 0, top: 0 };
   },
 });
-
-console.info([
-  {
-    path: '',
-    redirect: '/ui'
-  },
-  ...WebitelUi,
-  ...WebitelCcUi,
-  ...WebitelFlowUi,
-],);
 
 export default router;
