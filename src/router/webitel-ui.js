@@ -103,6 +103,8 @@ import WtTableDocs
   from '../components/pages/webitel-ui/components/wt-table/wt-table-docs';
 import ComposablesDocs
   from '../components/pages/webitel-ui/composables/composables-docs.vue';
+import UseCachedIntervalDocs
+  from '../components/pages/webitel-ui/composables/use-cached-interval/use-cached-interval-docs.vue';
 import UseDestroyableSortableDocs
   from '../components/pages/webitel-ui/composables/use-destroyable-sortable/use-destroyable-sortable-docs.vue';
 import ClickawayDirectiveDocs
@@ -581,6 +583,11 @@ const routes = [
             path: 'use-representable-agent-pause-cause',
             name: `${prefix}use-representable-agent-pause-cause`,
             component: UseRepresentableAgentPauseCauseDocs,
+          },
+          {
+            path: 'use-cached-interval',
+            name: `${prefix}use-cached-interval`,
+            component: UseCachedIntervalDocs,
           },
         ],
       },
