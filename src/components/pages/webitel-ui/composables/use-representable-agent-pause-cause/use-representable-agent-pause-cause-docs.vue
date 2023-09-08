@@ -20,7 +20,7 @@
       </figure>
       <h3>Output params:</h3>
       <figure>
-        <pre><code class="language-javascript">{{ outputCause }}</code></pre>
+        <pre><code class="language-javascript">{{ representablePauseCause }}</code></pre>
       </figure>
 
     </article>
@@ -29,6 +29,9 @@
 
 <script setup>
 import { ref } from 'vue';
+import {
+  useRepresentableAgentPauseCause
+} from '@webitel/ui-sdk/src/composables/useRepresentableAgentPauseCause/useRepresentableAgentPauseCause';
 
 const inputCauses = ref([
   {
@@ -48,38 +51,7 @@ const inputCauses = ref([
   },
 ])
 
-const outputCause = ref([
-  {
-    duration: '00:00',
-    durationMin: 0,
-    id: 30,
-    isOverflow: false,
-    limit: '01:00',
-    limitMin: 60,
-    name: 'Технічна перерва',
-    progressColor: 'success',
-  },
-  {
-    duration: '00:00',
-    durationMin: 0,
-    id: 69,
-    isOverflow: false,
-    limit: '01:00',
-    limitMin: 60,
-    name: 'Навчання',
-    progressColor: 'success',
-  },
-  {
-    duration: '00:00',
-    durationMin: 0,
-    id: 37,
-    isOverflow: false,
-    limit: '00:23',
-    limitMin: 23,
-    name: 'Обід',
-    progressColor: 'success',
-  }
-])
+const { representablePauseCause } = useRepresentableAgentPauseCause(inputCauses);
 </script>
 
 <style lang="scss" scoped>
