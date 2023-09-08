@@ -404,6 +404,11 @@ export default {
             value: 'use-destroyable-sortable',
             route: 'use-destroyable-sortable',
           },
+          {
+            name: 'useRepresentableAgentPauseCause',
+            value: 'use-representable-agent-pause-cause',
+            route: 'use-representable-agent-pause-cause',
+          },
         ],
       };
     },
