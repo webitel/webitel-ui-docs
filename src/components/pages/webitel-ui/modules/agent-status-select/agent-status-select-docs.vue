@@ -32,17 +32,17 @@
     <article>
       <ul>
         <li>
-          <h3>1) Status select view</h3> consists of a component and api that returns possible statuses
+          <h3>1) <b>Status select view</b></h3> consists of a component and api that returns possible statuses
         </li>
         <li>
-          <h3>2) Status select pause cause popup</h3> consists of:
-          <p>- popup component</p>
-          <p>- api that returns possible cause</p>
-          <p>- composable <code>useRepresentableAgentPauseCause</code> - calculates for each cause the total amount of time allowed and available to the active user</p>
-          <p>Entering parameter - pauseCauses - an array of cause</p>
+          <h3>2) <b>Status select pause cause popup</b> consists of:</h3>
+          <i>- popup component</i>
+          <p>- <i>api</i> that returns possible cause</p>
+          <b>Pay attention:</b> for the module to work correctly, you must have an API of a certain format in the store
+          <p>- <i>composable</i> <a class="full-docs-link" href="https://dev.webitel.com/ui-sdk/ui/composables/use-representable-agent-pause-cause">useRepresentableAgentPauseCause</a> - converts data into the required format</p>
         </li>
         <li>
-          <h3>3) Status select error popup</h3> consists of a component. Displayed if have errors after selecting a cause
+          <h3>3) <b>Status select error popup</b></h3> consists of a component. Displayed if have errors after selecting a cause
         </li>
       </ul>
     </article>
