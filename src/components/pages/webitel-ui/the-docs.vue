@@ -409,6 +409,11 @@ export default {
             value: 'use-representable-agent-pause-cause',
             route: 'use-representable-agent-pause-cause',
           },
+          {
+            name: 'useCachedInterval',
+            value: 'use-cached-interval',
+            route: 'use-cached-interval',
+          },
         ],
       };
     },
