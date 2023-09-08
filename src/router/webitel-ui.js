@@ -202,6 +202,8 @@ import WtStepperDocs
   from '../components/pages/webitel-ui/components/wt-stepper/wt-stepper-docs.vue';
 import WtExpansionPanelDocs
   from '../components/pages/webitel-ui/components/wt-expansion-panel/wt-expansion-panel-docs.vue';
+import UseRepresentableAgentPauseCauseDocs
+  from '../components/pages/webitel-ui/composables/use-representable-agent-pause-cause/use-representable-agent-pause-cause-docs.vue';
 
 const prefix = 'ui-';
 
@@ -574,6 +576,11 @@ const routes = [
             path: 'use-destroyable-sortable',
             name: `${prefix}use-destroyable-sortable`,
             component: UseDestroyableSortableDocs,
+          },
+          {
+            path: 'use-representable-agent-pause-cause',
+            name: `${prefix}use-representable-agent-pause-cause`,
+            component: UseRepresentableAgentPauseCauseDocs,
           },
         ],
       },
