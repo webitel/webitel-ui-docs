@@ -9,6 +9,9 @@
         <pre><code class="language-html">&lt;wt-hint&gt;lorem ipsum&lt;/wt-hint&gt;</code></pre>
       </div>
     </article>
+    <component-props
+      :properties="properties"
+    ></component-props>
     <component-slots
       :slots="slots"
     ></component-slots>
@@ -25,6 +28,15 @@
         {
           name: 'default',
           description: 'Default content slot',
+        },
+      ],
+      properties: [
+        {
+          value: 'iconColor',
+          code: '<wt-hint :iconColor="iconColor"></wt-hint>',
+          type: 'String',
+          default: 'outline',
+          description: 'This prop is changing color only for hint icon',
         },
       ],
     }),
