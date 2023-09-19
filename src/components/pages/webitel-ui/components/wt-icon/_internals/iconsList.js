@@ -1,4 +1,5 @@
 export default [
+  'email',
   'adfs',
   'azure',
   'instagram',

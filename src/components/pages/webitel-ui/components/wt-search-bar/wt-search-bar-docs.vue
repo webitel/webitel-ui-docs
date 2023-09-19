@@ -85,7 +85,7 @@
         },
         {
           value: 'customValidators',
-          code: '<wt-search-bar :custom-validators="cronValidator"></wt-search-bar>',
+          code: '<wt-search-bar :custom-validators="[{ name: \'cron\', text: this.$t(\'validation.cron\') }]"></wt-search-bar>',
           type: 'Array',
           default: '() => []',
         },

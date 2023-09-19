@@ -33,7 +33,7 @@
       properties: [
         {
           value: 'iconColor',
-          code: '<wt-hint :iconColor="iconColor"></wt-hint>',
+          code: '<wt-hint :icon-сolor="iconColor"></wt-hint>',
           type: 'String',
           default: 'outline',
           description: 'This prop is changing color only for hint icon',
