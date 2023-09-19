@@ -16,6 +16,7 @@
       <div class="example-wrapper">
         <wt-button>Primary</wt-button>
         <wt-button color="secondary">Secondary</wt-button>
+        <wt-button color="secondary-50">Secondary 50</wt-button>
         <wt-button disabled>Disabled</wt-button>
         <wt-button color="success">Success</wt-button>
         <wt-button color="danger">Danger</wt-button>
@@ -54,7 +55,7 @@
           value: 'color',
           code: '<wt-button color="primary"></wt-button>',
           type: 'String',
-          options: ['primary', 'secondary', 'success', 'danger', 'transfer', 'task'],
+          options: ['primary', 'secondary', 'secondary-50', 'success', 'danger', 'transfer', 'task'],
           default: 'primary',
         },
         {
