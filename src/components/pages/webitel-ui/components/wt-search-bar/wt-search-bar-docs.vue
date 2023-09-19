@@ -11,9 +11,9 @@
       </div>
       <div class="example-wrapper">
         <wt-search-bar
+          v-model="value"
           :hint="'Hint'"
           :v="vInvalid"
-          v-model="value"
           placeholder="Search"
         ></wt-search-bar>
         <pre><code class="language-html">&lt;wt-search-bar v-model="value" label="Search" :v="vInvalid" :hint="'Hint'" &gt;&lt;/wt-search-bar&gt;</code></pre>
