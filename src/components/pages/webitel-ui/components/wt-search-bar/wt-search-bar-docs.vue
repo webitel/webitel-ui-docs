@@ -85,7 +85,7 @@
         },
         {
           value: 'customValidators',
-          code: '<wt-search-bar :custom-validators="[{ name: \'cron\', text: this.$t(\'validation.cron\') }]"></wt-search-bar>',
+          code: '<wt-search-bar :custom-validators="[customV]"></wt-search-bar>',
           type: 'Array',
           default: '() => []',
         },
@@ -124,12 +124,12 @@
       slots: [
         {
           name: 'search-icon',
-          scope: [{ name: 'invalid' }],
+          scope: [{ name: 'invalid', description: 'needed to change icons color in additional-actions slot' }],
           description: 'Change default search icon',
         },
         {
           name: 'additional-actions',
-          scope: [{ name: 'invalid' }],
+          scope: [{ name: 'invalid', description: 'needed to change icons color in additional-actions slot' }],
           description: 'Adding additional functionality to search bar. For example wt-context-menu',
         },
       ],
