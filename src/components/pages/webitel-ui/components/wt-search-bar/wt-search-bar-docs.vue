@@ -9,6 +9,15 @@
         ></wt-search-bar>
         <pre><code class="language-html">&lt;wt-search-bar v-model="value" label="Search"&gt;&lt;/wt-search-bar&gt;</code></pre>
       </div>
+      <div class="example-wrapper">
+        <wt-search-bar
+          v-model="value"
+          :hint="'Hint'"
+          :v="vInvalid"
+          placeholder="Search"
+        ></wt-search-bar>
+        <pre><code class="language-html">&lt;wt-search-bar v-model="value" label="Search" :v="vInvalid" :hint="'Hint'" &gt;&lt;/wt-search-bar&gt;</code></pre>
+      </div>
     </article>
     <component-model
     ></component-model>
@@ -63,6 +72,23 @@
           type: 'Boolean',
           default: 'false',
         },
+        {
+          value: 'hint',
+          code: '<wt-search-bar :hint="\'Hint\'"></wt-search-bar>',
+          type: 'String',
+        },
+        {
+          value: 'v',
+          code: '<wt-search-bar :v="vInvalid"></wt-search-bar>',
+          type: 'Object',
+          default: '',
+        },
+        {
+          value: 'customValidators',
+          code: '<wt-search-bar :custom-validators="[customV]"></wt-search-bar>',
+          type: 'Array',
+          default: '() => []',
+        },
       ],
       events: [
         {
@@ -98,9 +124,20 @@
       slots: [
         {
           name: 'search-icon',
+          scope: [{ name: 'invalid', description: 'needed to change icons color in additional-actions slot' }],
           description: 'Change default search icon',
         },
+        {
+          name: 'additional-actions',
+          scope: [{ name: 'invalid', description: 'needed to change icons color in additional-actions slot' }],
+          description: 'Adding additional functionality to search bar. For example wt-context-menu',
+        },
       ],
+      vInvalid: {
+        $error: true,
+        $dirty: true,
+        required: false,
+      },
     }),
     mounted() {
       Prism.highlightAll();
