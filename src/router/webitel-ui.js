@@ -107,6 +107,8 @@ import UseCachedIntervalDocs
   from '../components/pages/webitel-ui/composables/use-cached-interval/use-cached-interval-docs.vue';
 import UseDestroyableSortableDocs
   from '../components/pages/webitel-ui/composables/use-destroyable-sortable/use-destroyable-sortable-docs.vue';
+import useDeleteConfirmationPopupDocs
+  from '../components/pages/webitel-ui/composables/use-delete-confirmation-popup/use-delete-confirmation-popup-docs.vue';
 import ClickawayDirectiveDocs
   from '../components/pages/webitel-ui/directives/clickaway-directive/clickaway-directive-docs';
 import DirectivesDocs
@@ -578,6 +580,11 @@ const routes = [
             path: 'use-destroyable-sortable',
             name: `${prefix}use-destroyable-sortable`,
             component: UseDestroyableSortableDocs,
+          },
+          {
+            path: 'use-delete-confirmation-popup',
+            name: `${prefix}use-delete-confirmation-popup`,
+            component: useDeleteConfirmationPopupDocs,
           },
           {
             path: 'use-representable-agent-pause-cause',
