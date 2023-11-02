@@ -80,6 +80,7 @@
       events: [
         {
           value: 'close',
+          description: 'close popup',
         },
       ],
       slots: [

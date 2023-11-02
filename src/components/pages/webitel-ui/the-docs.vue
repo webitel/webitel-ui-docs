@@ -207,6 +207,11 @@ export default {
             route: 'popup',
           },
           {
+            name: 'Delete Confirmation Popup',
+            value: 'delete-confirmation-popup',
+            route: 'delete-confirmation-popup',
+          },
+          {
             name: 'Load bar',
             value: 'load-bar',
             route: 'load-bar',
@@ -403,6 +408,11 @@ export default {
             name: 'useDestroyableSortable',
             value: 'use-destroyable-sortable',
             route: 'use-destroyable-sortable',
+          },
+          {
+            name: 'useDeleteConfirmationPopup',
+            value: 'use-delete-confirmation-popup',
+            route: 'use-delete-confirmation-popup',
           },
           {
             name: 'useRepresentableAgentPauseCause',

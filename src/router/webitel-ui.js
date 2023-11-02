@@ -101,12 +101,16 @@ import WtTableColumnSelectDocs
   from '../components/pages/webitel-ui/components/wt-table-column-select/wt-table-column-select-docs';
 import WtTableDocs
   from '../components/pages/webitel-ui/components/wt-table/wt-table-docs';
+import DeleteConfirmationPopupDocs
+  from '../components/pages/webitel-ui/components/delete-confirmation-popup/delete-confirmation-popup-docs.vue';
 import ComposablesDocs
   from '../components/pages/webitel-ui/composables/composables-docs.vue';
 import UseCachedIntervalDocs
   from '../components/pages/webitel-ui/composables/use-cached-interval/use-cached-interval-docs.vue';
 import UseDestroyableSortableDocs
   from '../components/pages/webitel-ui/composables/use-destroyable-sortable/use-destroyable-sortable-docs.vue';
+import useDeleteConfirmationPopupDocs
+  from '../components/pages/webitel-ui/composables/use-delete-confirmation-popup/use-delete-confirmation-popup-docs.vue';
 import ClickawayDirectiveDocs
   from '../components/pages/webitel-ui/directives/clickaway-directive/clickaway-directive-docs';
 import DirectivesDocs
@@ -521,6 +525,11 @@ const routes = [
             component: WtTableActionsDocs,
           },
           {
+            path: 'delete-confirmation-popup',
+            name: `${prefix}delete-confirmation-popup-docs`,
+            component: DeleteConfirmationPopupDocs,
+          },
+          {
             path: 'table-column-select',
             name: `${prefix}table-column-select-docs`,
             component: WtTableColumnSelectDocs,
@@ -578,6 +587,11 @@ const routes = [
             path: 'use-destroyable-sortable',
             name: `${prefix}use-destroyable-sortable`,
             component: UseDestroyableSortableDocs,
+          },
+          {
+            path: 'use-delete-confirmation-popup',
+            name: `${prefix}use-delete-confirmation-popup`,
+            component: useDeleteConfirmationPopupDocs,
           },
           {
             path: 'use-representable-agent-pause-cause',
