@@ -1,32 +1,62 @@
 <template>
-  <wt-popup
-      class="delete-confirmation-popup"
-      width="500"
-      @close="close"
-  >
-    <template v-slot:title>{{ $t('webitelUI.deleteConfirmationPopup.title') }}</template>
-    <template v-slot:main>
-      <div class="delete-confirmation-popup__content">
-        <wt-icon icon="attention" color="error"/>
-        <p class="delete-confirmation-popup__message">
-          deleteMessage
-        </p>
+  <section>
+    <h2>Delete Confirmation Popup</h2>
+    <article>
+      <div class="example-wrapper">
+        <div class="popup-wrapper">
+          <wt-popup
+              class="delete-confirmation-popup"
+              width="500"
+          >
+            <template v-slot:title> Confirm deletion </template>
+            <template v-slot:main>
+              <div class="delete-confirmation-popup__content">
+                <wt-icon icon="attention" color="danger"/>
+                <p class="delete-confirmation-popup__message">
+                  Are you sure you want to delete 1 item?
+                </p>
+              </div>
+            </template>
+            <template v-slot:actions>
+              <wt-button
+              > Yes
+              </wt-button>
+              <wt-button
+                  color="secondary"
+              > No
+              </wt-button>
+            </template>
+          </wt-popup>
+        </div>
+        <pre><code class="language-html">
+            &lt;wt-popup&gt;
+              &lt;template v-slot:title&gt;
+                Confirm deletion
+              &lt;/template&gt;
+              &lt;template v-slot:main&gt;
+                &lt;div&gt;
+                  &lt;wt-icon icon="attention"/&gt;
+                  &lt;p> Are you sure you want to delete { deleteCount } items? &lt;/p&gt;
+                &lt;/div&gt;
+              &lt;/template&gt;
+              &lt;template v-slot:actions&gt;
+                &lt;wt-button&gt; Yes &lt;/wt-button&gt;
+                &lt;wt-button color="secondary"&gt; No &lt;/wt-button&gt;
+              &lt;/template&gt;
+            &lt;/wt-popup&gt;
+          </code></pre>
       </div>
-    </template>
-    <template v-slot:actions>
-      <wt-button
-          :loading="isDeleting"
-          @click="confirm"
-      > Yes
-      </wt-button>
-      <wt-button
-          :disabled="isDeleting"
-          color="secondary"
-          @click="close"
-      > No
-      </wt-button>
-    </template>
-  </wt-popup>
+    </article>
+    <component-props
+        :properties="properties"
+    ></component-props>
+    <component-events
+        :events="events"
+    ></component-events>
+    <component-slots
+        :slots="slots"
+    ></component-slots>
+  </section>
 </template>
 
 <script>
@@ -38,13 +68,15 @@ export default {
     properties: [
       {
         value: 'deleteCount',
+        required: "true",
         type: 'Number',
-        description: '',
+        description: 'Number of items must be deleted',
       },
       {
         value: 'callback',
+        required: "true",
         type: 'Function',
-        description: '',
+        description: 'Function that delete items',
       },
     ],
     events: [
@@ -54,12 +86,8 @@ export default {
     ],
     slots: [
       {
-        name: 'header',
-        description: 'popup header slot',
-      },
-      {
         name: 'title',
-        description: "title text slot inside h3 in header, if header slot wasn't passed)",
+        description: "title text slot in header",
       },
       {
         name: 'main',
@@ -87,5 +115,16 @@ export default {
     position: absolute;
     z-index: 1;
   }
+}
+
+.delete-confirmation-popup__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.delete-confirmation-popup__message {
+  text-align: center;
 }
 </style>

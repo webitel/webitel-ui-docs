@@ -101,6 +101,8 @@ import WtTableColumnSelectDocs
   from '../components/pages/webitel-ui/components/wt-table-column-select/wt-table-column-select-docs';
 import WtTableDocs
   from '../components/pages/webitel-ui/components/wt-table/wt-table-docs';
+import DeleteConfirmationPopupDocs
+  from '../components/pages/webitel-ui/components/delete-confirmation-popup/delete-confirmation-popup-docs.vue';
 import ComposablesDocs
   from '../components/pages/webitel-ui/composables/composables-docs.vue';
 import UseCachedIntervalDocs
@@ -521,6 +523,11 @@ const routes = [
             path: 'table-actions',
             name: `${prefix}table-actions-docs`,
             component: WtTableActionsDocs,
+          },
+          {
+            path: 'delete-confirmation-popup',
+            name: `${prefix}delete-confirmation-popup-docs`,
+            component: DeleteConfirmationPopupDocs,
           },
           {
             path: 'table-column-select',
